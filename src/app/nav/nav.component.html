@@ -1,0 +1,26 @@
+
+<nav class="nav-bar-container">
+    <div class="nav-content">
+        <div (click)="homePage()" class="logo-section">
+        </div>
+        <div (click)="homePage()" class="title"><div class="h2"><span class="h2color1">'</span>C<span class="h2color1">_</span>DEV<span class="h2color1">'</span></div></div>
+        <div class="menu-icon" (click)="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+            @if (navItems && navItems.length >0) {
+                <ul [ngClass]="{ 'menu-open': menuOpen }">
+                    @for (nav of navItems; track $index) {
+                        <li [ngClass]="{'active-item': nav.active}" class="{{nav.path}}" (click)="selectedItem(nav)">
+                            <i class="{{nav.icon}}"></i>
+                            {{nav.name}}
+                        </li>      
+                    }
+
+                </ul>
+                
+            }
+    </div>    
+</nav>
+
