@@ -1,0 +1,13 @@
+.medio_fondo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 86%;
+    margin: auto;
+    margin-top: 40px;
+    height: 53vh;
+    z-index: -1;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background: linear-gradient(0deg, rgba(6, 16, 26, 0.4) 0%, rgba(2, 16, 29, 0.6) 100%);
+}
