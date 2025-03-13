@@ -1,12 +1,12 @@
 [
     {
       "url": "https://player.vimeo.com/video/1065072327?badge=0&autopause=0&player_id=0&app_id=58479",
-      "name": "Aplicación Web Angular y Api springboot con IA integrada",
+      "name": "Aplicación Web Angular y Api springboot con IA integrada.",
       "description": "Descripción del primer video."
     },
     {
       "url": "https://player.vimeo.com/video/1065067394?badge=0&autopause=0&player_id=0&app_id=58479",
-      "name": "Aplicación de escritorio y Web CRM para gestión Pymes",
+      "name": "Aplicación de escritorio y Web CRM para gestión Pymes.",
       "description": "Descripción del segundo video."
     }
   ]

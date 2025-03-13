@@ -1,0 +1,39 @@
+@use '../../../themes/theme.scss' as theme;
+
+.titulo-container{
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 17px;
+    font-family: theme.$font-console;
+    color: theme.$white;
+    h3{
+        all: unset;
+        font-size: 40px;
+        border-bottom: theme.$border-bottom;
+    }
+}
+
+.tec-division{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    .principal{
+        ul{
+            all: unset;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            color: white;
+            li{
+                all: unset;
+            }
+        }
+
+    }
+    .secundary{
+
+    }
+}
