@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { NavItemConfig } from '../interfaces/config/nav-config.interfaces';
+import { NavItemConfig } from '../../interfaces/config/nav-config.interfaces';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

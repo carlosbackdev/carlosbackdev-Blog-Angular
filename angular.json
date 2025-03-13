@@ -26,6 +26,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets/favicon/favicon.ico",
+              "src/assets/favicon/site.webmanifest",
+              "src/assets",
+              "src/_redirects",
               {
                 "glob": "**/*",
                 "input": "public"
