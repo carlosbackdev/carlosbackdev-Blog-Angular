@@ -27,7 +27,7 @@ export class NavComponent {
   },
   {
     name: 'PROYECTOS',
-    path: '',
+    path: 'projects',
     icon:'bi bi-bookmark-plus-fill',
     active: false
   },
