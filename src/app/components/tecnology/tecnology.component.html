@@ -4,19 +4,45 @@
     </div>
     <div class="tec-division">
         <div class="principal">
+            <h4>Principales</h4>
             <ul>
-                <li>java</li>
-                <li>spring</li>
-                <li>typescrpit</li>
-                <li>angular</li>
+                @for (skill of skillPrincipal; track $index) {
+                    <li>
+                        @if(skill.name.toLowerCase() !== 'typescript'){
+                            <img src="{{skill.image}}" alt="{{skill.name}}" title="{{skill.name}}">                        }
+                        @if(skill.name === 'TypeScript'){
+                            <img src="{{skill.image}}" title="{{skill.name}}" style="position: relative; scale: 0.8; top: 82px; left:60px;" alt="{{skill.name}}">
+                        }
+                    </li>
+                }
             </ul>
         </div>
         <div class="secundary">
+            <h4>Bases</h4>
             <ul>
-                <li>nodejs</li>
-                <li>express</li>
-                <li>mongodb</li>
-                <li>mysql</li>
+                @for (base of bases; track $index) {
+                    <li>
+                        <img src="{{base.image}}" title="{{base.name}}" alt="{{base.name}}">
+                    </li>
+                }
+            </ul>
+            <br><br>
+            <h4>Interfaces y otras</h4>
+            <ul>
+                @for (interfaz of interfaces; track $index) {
+                    <li>
+                        <img src="{{interfaz.image}}" title="{{interfaz.name}}" alt="{{interfaz.name}}">
+                    </li>
+                }
+            </ul>
+            <br><br>
+            <h4>Sistemas y servidores</h4>
+            <ul>
+                @for (sistema of sistemas; track $index) {
+                    <li>
+                        <img src="{{sistema.image}}" title="{{sistema.name}}" alt="{{sistema.name}}">
+                    </li>
+                }
             </ul>
         </div>
     </div>

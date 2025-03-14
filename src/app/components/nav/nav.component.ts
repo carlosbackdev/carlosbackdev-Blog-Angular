@@ -15,31 +15,31 @@ export class NavComponent {
   menuOpen: boolean = false;
   navItems: NavItemConfig[] = [{
     name: 'INICIO',
-    path: '',
+    path: 'inicio',
     icon:'bi bi-film',
     active: true
   },
   {
     name: 'TECNOLOGIAS',
-    path: 'discover',
+    path: 'tecnology',
     icon:'bi bi-bar-chart-fill',
     active: false
   },
   {
     name: 'PROYECTOS',
-    path: 'list',
+    path: '',
     icon:'bi bi-bookmark-plus-fill',
     active: false
   },
   {
     name: 'CONÓCEME', 
-    path: 'profile', 
+    path: '', 
     icon: 'bi bi-person-fill',
     active: false,
   },
   {
     name: 'CONTACTO',
-    path: 'contact',
+    path: '',
     icon:'bi bi-send-fill',
     active: false
   },]

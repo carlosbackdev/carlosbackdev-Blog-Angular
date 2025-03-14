@@ -9,7 +9,7 @@
         <div class="video-container">
             <div class="video">
                  @if(videos.length > 0){
-                    <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(videos[currentVideoIndex]?.url || '')"
+                    <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(videos[currentVideoIndex].url)"
                         frameborder="0" allow="autoplay; fullscreen" title="Video">
                     </iframe>
                  }
@@ -28,7 +28,9 @@
             </div>
         </div>
     </div>
-    <p class="titulo-video">{{currentVideoIndex+1}}. {{videos[currentVideoIndex]?.name  }}</p>
+    @if(videos.length > 0){
+        <p class="titulo-video">{{currentVideoIndex+1}}. {{videos[currentVideoIndex].name}}</p>
+    }
     <div class="container-pie">
         <ul>
             <li><h2>backend <span>developer</span></h2></li>

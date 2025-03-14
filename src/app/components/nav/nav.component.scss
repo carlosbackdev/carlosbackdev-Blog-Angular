@@ -39,6 +39,9 @@
         margin: 0px;
         padding: 0px;
         align-items: center;
+        a{
+            all: unset;
+        }
         
         li{
             display: flex;
