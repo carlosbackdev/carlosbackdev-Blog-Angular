@@ -1,6 +1,9 @@
 {
   "skillPrincipal": [
-    { "name": "Java", "image": "/assets/images/java lo.png", "title": "Java" },
+    { "name": "Java", "image": "/assets/images/java lo.png", "title": "Java",
+    "projects":{
+      "name":"elecidea"
+    } },
     { "name": "Spring Boot", "image": "/assets/images/spring-boot-logo.png", "title": "Spring boot" },
     { "name": "Angular", "image": "/assets/images/angular.png", "title": "Angular" },
     { "name": "TypeScript", "image": "/assets/images/typescript.png", "title": "typescript" }
