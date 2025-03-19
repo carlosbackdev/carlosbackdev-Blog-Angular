@@ -1,0 +1,61 @@
+[
+    {
+      "title": "Proyecto de Recomendaciones de Películas",
+      "video":"",
+      "images": [
+        {
+          "image": "/assets/images/project/blog.webp"
+        },
+        {
+          "image": "/assets/images/project/other-image.webp"
+        }
+      ],
+      "repository": "https://github.com/usuario/proyecto-peliculas",
+      "link": "https://moviesearch.es",
+      "descripcion": "Una aplicación de recomendaciones de películas basada en las preferencias del usuario.",
+      "explication":"",
+      "tecnology": [
+        {
+          "name": "Java",
+          "image":"/assets/images/logo//java.png"
+        },
+        {
+          "name": "MySQL",
+          "image":"/assets/images/logo//mysql.png"
+        },
+        {
+          "name": "Apache",
+          "image":"/assets/images/logo/apache.png"
+        },
+        {
+          "name": "NetBeans",
+          "image":"/assets/images/logo/netbeans.png"
+        }
+      ]
+    },
+    {
+      "title": "ElecIdea software ERP desktop",
+      "video":"",
+      "images": [
+        {
+          "image": "/assets/images/project/elecideaWeb.webp"
+        },
+        {
+          "image": "/assets/images/project/another-image.webp"
+        }
+      ],
+      "repository": "https://github.com/usuario/proyecto-peliculas",
+      "link": "https://www.elecidea.com/",
+      "descripcion": "Aplicación de escritorio desarrollada en Java y MySQL, diseñada específicamente para gestionar funciones clave en el sector eléctrico. El sistema es una solución <strong>CRUD</strong>, que permite una gestión eficiente de diversas operaciones empresariales.",
+      "explication": "### Características Principales:\n- **Gestión de Facturas**: Administra fácilmente las facturas de los clientes, visualiza el estado de los pagos y genera documentos de facturación.\n- **Gestión de Clientes**: Almacena y realiza un seguimiento de la información detallada de los clientes, facilitando la administración de cada cuenta.\n- **Gestión de Proyectos**: Monitorea y sigue el progreso de los proyectos en curso, incluyendo los aspectos financieros y las etapas de finalización.\n- **Automatización de Facturas**: Exporta automáticamente las facturas en formato Excel y envíalas por correo electrónico a los clientes, optimizando el proceso de facturación.\n- **Seguimiento del Crecimiento Empresarial**: Realiza un seguimiento de la evolución de los clientes y el crecimiento del negocio, facilitando la toma de decisiones estratégicas.\n\n### Tecnologías Utilizadas:\n- **Java** para el desarrollo central de la aplicación.\n- **MySQL** para la gestión de la base de datos.\n- **Swing** para la interfaz gráfica de usuario (GUI).\n- **Flatlaf** para un diseño moderno de tema oscuro.\n- **Apache POI** para generar documentos en formato XLSX.\n- **JavaMail** para el envío automático de correos electrónicos.\n- **Java Ant** para la compilación y construcción de la aplicación.\n- **NetBeans** como entorno de desarrollo.\n\n### Utilidad:\nLa aplicación está diseñada para agilizar los procesos empresariales en el sector eléctrico, ofreciendo una solución integral para la facturación, gestión de clientes y seguimiento de proyectos. El sistema permite una gestión de datos fácil y una comunicación eficiente con los clientes, incluyendo el envío automático de facturas.",
+      "tecnology": [
+        {
+          "name": "Java"
+        },
+        {
+          "name": "MySQL"
+        }
+      ]
+    }
+  ]
+  

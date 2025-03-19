@@ -2,12 +2,12 @@ import { SkillPrincipal } from "./skill-config.interfaces";
 
 export interface ProjectConfig{
     title: string;
-    images: ProjecImages[];
+    images: ProjectImages[];
     repository:string;
     link:string;
     descripcion:string;
     tecnology: SkillPrincipal[];
 }
-export interface ProjecImages{
+export interface ProjectImages{
     image:string;
 }

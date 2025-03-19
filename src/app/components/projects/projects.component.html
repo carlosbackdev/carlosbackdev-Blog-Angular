@@ -2,4 +2,10 @@
     <div class="titulo-container">
         <h3>Proyectos</h3>
     </div>
+    @if(projectConfig.length > 0){
+        @for (project of projectConfig; track $index) {
+            <h4>{{ project.title }}</h4>
+            <img src={{project.images[0].image}} alt="Imagen de {{project.title}}">
+          }
+    }
 </section>

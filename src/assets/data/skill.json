@@ -1,15 +1,12 @@
 {
   "skillPrincipal": [
-    { "name": "Java", "image": "/assets/images/java lo.png", "title": "Java",
-    "projects":{
-      "name":"elecidea"
-    } },
+    { "name": "Java", "image": "/assets/images/logo/java.png", "title": "Java"},
     { "name": "Spring Boot", "image": "/assets/images/spring-boot-logo.png", "title": "Spring boot" },
     { "name": "Angular", "image": "/assets/images/angular.png", "title": "Angular" },
     { "name": "TypeScript", "image": "/assets/images/typescript.png", "title": "typescript" }
   ],
   "bases":[
-    { "name": "MySql", "image": "/assets/images/mysqllogo.png", "title": "MySql" },
+    { "name": "MySql", "image": "/assets/images/logo/mysql.png", "title": "MySql" },
     { "name": "Pl/Sql", "image": "/assets/images/plsql.png", "title": "Pl/Sql" },
     { "name": "MongoDB", "image": "/assets/images/mongologo.png", "title": "MongoDB" },
     { "name": "FireBase", "image": "/assets/images/fire.png", "title": "FireBase" }

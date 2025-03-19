@@ -1,0 +1,20 @@
+{
+    "java":
+      { 
+        "image": "/assets/images/logo/java.png", 
+        "projects":[
+          {
+            "name":"Elecidea",
+            "link":"sdsd"
+          },
+          {
+            "name":"Movisearch",
+            "link":"asaa"
+          }
+      ] 
+     },
+     "mysql":{
+        
+     }
+  }
+    
