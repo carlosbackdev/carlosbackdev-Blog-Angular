@@ -1,8 +1,8 @@
 {
   "skillPrincipal": [
     { "name": "Java", "image": "/assets/images/logo/java.png", "title": "Java"},
-    { "name": "Spring Boot", "image": "/assets/images/spring-boot-logo.png", "title": "Spring boot" },
-    { "name": "Angular", "image": "/assets/images/angular.png", "title": "Angular" },
+    { "name": "Spring Boot", "image": "/assets/images/logo/spring.png", "title": "Spring boot" },
+    { "name": "Angular", "image": "/assets/images/logo/angular.png", "title": "Angular" },
     { "name": "TypeScript", "image": "/assets/images/typescript.png", "title": "typescript" }
   ],
   "bases":[
@@ -12,7 +12,7 @@
     { "name": "FireBase", "image": "/assets/images/fire.png", "title": "FireBase" }
   ],
     "otras":[
-    { "name": "JavaScript", "image": "/assets/images/javascript logo.png", "title": "MySql" },
+    { "name": "JavaScript", "image": "/assets/images/logo/javascript.png", "title": "MySql" },
     { "name": "IA Integration", "image": "/assets/images/ia.webp", "title": "IA Integration" },
     { "name": "Html", "image": "/assets/images/html5logo.png", "title": "Html" },
     { "name": "Css", "image": "/assets/images/csslogo.png", "title": "css" }

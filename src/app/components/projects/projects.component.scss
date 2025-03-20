@@ -14,3 +14,98 @@
         border-bottom: theme.$border-bottom;
     }
 }
+ul{
+    all: unset;
+    text-align: center;
+    display: flex;
+    height: auto;
+    margin: auto;
+    justify-content: space-evenly; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    li{
+        all: unset;
+        display: grid        ;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: auto;
+        padding: 40px;
+        margin-bottom: 40px;
+
+        .luz{
+            position: relative;
+            left: -1%;
+            top: 100px;
+            cursor: pointer;
+            z-index: 2;
+            width: 35px;
+            height: 35px;
+            margin: auto;
+            background: radial-gradient(circle, rgba(224, 184, 8, 0) -100%, rgb(236, 221, 13) 15%, rgba(20, 20, 20, 0) 81%);
+        }
+
+        .contenedor-imagen{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(0deg, rgba(6, 16, 26, 0.712) 0%, rgba(2, 16, 29, 1) 100%);
+            height: 500px;
+            width: 371px;
+            box-shadow: 0px 2px 17px rgb(0 154 255), 0px 0px 15px rgb(0 152 255 / 82%);
+            border-radius: 75px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(117, 117, 117);
+                box-shadow: 2px 8px 10px rgba(41, 128, 185), 2px 3px 10px rgba(105, 158, 194, 0.815); 
+            }
+            
+            
+            img{
+                width: 85%;
+                height: 90%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50px;
+                position: relative;
+                z-index: 0;
+            }
+        }
+        .resumen{
+            position: relative;
+            align-items: center;
+            top: -140px;
+            background-color: rgb(0, 155, 255, 0.95);
+            height: 80px;
+            margin-left: 25px;
+            margin-right: 25px;
+            border-radius: 10px;
+            border: 2px solid black;
+            padding-top: 5px;
+            
+            h4{
+                font-family: theme.$font-fira;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0px;
+            }
+            .tecnologias{
+                display: flex;
+                width: 90%;
+                margin: auto;
+                justify-content: space-around;
+
+                .logo{
+                    object-fit: contain;
+                    width: 40px;
+                    height: 40px;
+                    margin-top: 2px;
+                    filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 1));
+                }
+            }
+        }
+
+    }
+}

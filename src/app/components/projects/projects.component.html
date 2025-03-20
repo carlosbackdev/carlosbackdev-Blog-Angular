@@ -1,11 +1,23 @@
 <section>
     <div class="titulo-container">
-        <h3>Proyectos</h3>
+        <h3>PROYECTOS</h3>
     </div>
     @if(projectConfig.length > 0){
+        <ul>
         @for (project of projectConfig; track $index) {
-            <h4>{{ project.title }}</h4>
-            <img src={{project.images[0].image}} alt="Imagen de {{project.title}}">
-          }
+            <li>
+                <div class="luz"></div>
+                <div class="contenedor-imagen">
+                    <img src={{project.images[0].image}} alt="Imagen de {{project.title}}" title="Imagen de {{project.title}}">
+                </div>
+                <div class="resumen">
+                    <h4>{{ project.title }}</h4>
+                    <div class="tecnologias">             
+                        <img *ngFor="let tech of project.tecnology" class="logo" [src]="tech.image" [alt]="tech.name" [title]="tech.name">
+                    </div>
+                </div>
+            </li>
+        }
+        </ul>
     }
 </section>

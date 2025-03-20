@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProjectConfig, ProjectImages } from '../../interfaces/config/project.interfaces';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
