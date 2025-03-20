@@ -63,6 +63,12 @@
                     background-repeat: no-repeat;
                     background-position: center center;
                 }
+                #ts{
+                    position: relative; 
+                    scale: 0.8; 
+                    top: 82px; 
+                    left:60px;
+                }
             }
         }
 
@@ -109,6 +115,76 @@
                     width: 74%;  
                     height: 74%;
                     object-fit: contain; 
+                }
+            }
+        }
+    }
+}
+@media (max-width: 850px){
+    .titulo-container{
+        margin-top: 40px;
+
+        h3{
+            font-size: 35px;
+        }
+    }
+    
+    .tec-division{
+        flex-direction: column;
+
+        .principal{
+
+            ul{
+                gap: 80px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+
+                li{
+                    width: 100px; 
+                    height: 100px; 
+
+                    &:hover{
+                        background: radial-gradient(circle, rgba(20,20,20, 0) 55%, rgb(41, 128, 185) 70%, rgba(8, 90, 184, 0.8) 90%);
+                        box-shadow: 0 0 15px rgba(24, 101, 245, 0.5), 0 0 19px rgba(24, 101, 245, 0.5), 0 0 29px rgba(24, 101, 245, 0.5); 
+                    }
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: auto;
+                        height: auto;
+                        max-width: 80px;
+                        max-height: 80px;
+
+                    }
+                    #ts{
+                        top:42px;
+                        left: 32px;
+                    }
+                }
+            }
+    
+        }
+        .secundary {
+            text-align: center;
+    
+            h4 {
+                font-size: 17px;
+            }
+    
+            ul {
+                gap: 0px;
+                margin-bottom: 14px;
+
+    
+                    li {
+                    width: 60px;
+                    height: 60px;
+    
+                    img {
+
+                    }
                 }
             }
         }

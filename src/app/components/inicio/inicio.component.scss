@@ -181,6 +181,7 @@
 @media (max-width: 850px) {
     
     .medio-container{
+        height: 60vh;
         .medio_fondo {
             border-radius: 8px;
             width: 98%;
@@ -225,8 +226,8 @@
         width: 98%;
         border-radius: 8px;
         margin: auto;
-        margin-top: 32px;
-        height: 25vh;        
+        margin-top: 95px;
+        height: 32vh;        
 
         ul{
             flex-direction: column;
