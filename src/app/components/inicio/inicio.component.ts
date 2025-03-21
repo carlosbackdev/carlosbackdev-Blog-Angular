@@ -18,10 +18,14 @@ export class InicioComponent implements AfterViewInit {
   constructor(public sanitizer: DomSanitizer, private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<VideoConfig[]>('/assets/data/videos.json').subscribe((data) => {
-      this.videos = data;
-      this.updateButtonVisibility();
-    });
+    this.http.get<VideoConfig[]>('/assets/data/videos.json').subscribe({ 
+      next: (data) => { 
+      this.videos = data; 
+      this.updateButtonVisibility(); 
+      },error:(error) =>{ 
+        console.error("erro a cargar los videos",error); 
+      } 
+    }); 
   }
 
   ngAfterViewInit() {

@@ -33,12 +33,25 @@ ul{
         height: auto;
         padding: 40px;
         margin-bottom: 40px;
+        cursor: pointer;
 
+        &:first-child .luz{
+            left: 5px;
+            
+        }
+        &:hover .luz{
+            scale: 1.5;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover .contenedor-imagen{
+            background-color: rgb(117, 117, 117);
+            box-shadow: 2px 8px 10px rgba(41, 128, 185), 2px 3px 10px rgba(105, 158, 194, 0.815); 
+            transition: all 0.3s ease-in-out;
+        }
         .luz{
             position: relative;
             left: -1%;
-            top: 100px;
-            cursor: pointer;
+            top: 90px;
             z-index: 2;
             width: 35px;
             height: 35px;
@@ -56,12 +69,6 @@ ul{
             width: 371px;
             box-shadow: 0px 2px 17px rgb(0 154 255), 0px 0px 15px rgb(0 152 255 / 82%);
             border-radius: 75px;
-            cursor: pointer;
-            &:hover{
-                background-color: rgb(117, 117, 117);
-                box-shadow: 2px 8px 10px rgba(41, 128, 185), 2px 3px 10px rgba(105, 158, 194, 0.815); 
-            }
-            
             
             img{
                 width: 85%;
@@ -109,12 +116,49 @@ ul{
 
     }
 }
+
+
 @media (max-width: 850px){
     .titulo-container{
         margin-top: 40px;
  
         h3{
             font-size: 35px;
+        }
+    }
+    ul{
+        overflow-x: auto;
+        gap: 30px;
+        li{
+
+            padding: 0px;
+            margin-bottom: 20px;
+            scale: 0.85;
+    
+            .luz{
+            }
+    
+            .contenedor-imagen{
+               
+                img{
+
+                }
+            }
+            .resumen{
+
+                
+                h4{
+
+                }
+                .tecnologias{
+
+    
+                    .logo{
+ 
+                    }
+                }
+            }
+    
         }
     }
 }

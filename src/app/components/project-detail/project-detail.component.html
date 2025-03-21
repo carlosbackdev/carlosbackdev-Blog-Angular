@@ -1,0 +1,13 @@
+<section class="modal-project" *ngIf="showModal" (click)="closeModal()">
+    <div class="modal-container" (click)="$event.stopPropagation()">
+      <button class="close" alt="Cerrar proyecto" title="Cerrar proyecto" (click)="closeModal()">
+        <i class="bi bi-x-square"></i>
+      </button>
+      <h2>{{ project?.title }}</h2> 
+      <p>{{ project?.descripcion }}</p> 
+      <div class="tecnologias">
+        <h4>Tecnologías:</h4>
+        <img *ngFor="let tech of project?.tecnology" class="logo" [src]="tech.image" [alt]="tech.name" [title]="tech.name">
+      </div>
+    </div>
+</section>

@@ -9,7 +9,7 @@
         <div class="video-container">
             <div class="video">
                  @if(videos.length > 0){
-                    <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(videos[currentVideoIndex].url)"
+                    <iframe loading="lazy" [src]="sanitizer.bypassSecurityTrustResourceUrl(videos[currentVideoIndex].url)"
                         frameborder="0" allow="autoplay; fullscreen" title="Video">
                     </iframe>
                  }

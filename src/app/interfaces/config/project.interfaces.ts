@@ -7,6 +7,7 @@ export interface ProjectConfig{
     link:string;
     descripcion:string;
     tecnology: SkillPrincipal[];
+    onClick?: () => any
 }
 export interface ProjectImages{
     image:string;

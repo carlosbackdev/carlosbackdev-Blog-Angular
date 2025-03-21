@@ -1,20 +1,53 @@
-{
-    "java":
-      { 
+{ 
+    "java": 
+      {  
         "image": "/assets/images/logo/java.png", 
-        "projects":[
-          {
-            "name":"Elecidea",
-            "link":"sdsd"
-          },
-          {
-            "name":"Movisearch",
-            "link":"asaa"
-          }
-      ] 
-     },
-     "mysql":{
-        
-     }
-  }
-    
+        "projects":[ 
+          { 
+            "name":"ElecIdea Api & App Web", 
+            "resume":"Usado en la Api, en Spring boot, para el microservicio web", 
+            "link":"sdsd" 
+          }, 
+          { 
+            "name":"Movisearch", 
+            "resume":"Usado en la Api, en Spring boot, para el microservicio web", 
+            "link":"asaa" 
+          }, 
+          { 
+            "name":"ElecIdea software ERP desktop", 
+            "resume":"Usado para crear tanto el backend y la intefaz gráfica con swing", 
+            "link":"asaa" 
+          } 
+      ]  
+     }, 
+     "Spring Boot":{ 
+      "image": "/assets/images/logo/spring.png", 
+      "projects":[ 
+          { 
+            "name":"ElecIdea Api & App Web", 
+            "resume":"Usado en la Api,Logica de la web, como microservicio web con manejo de la base de datos mediante hibernate", 
+            "link":"sdsd" 
+          }, 
+          { 
+            "name":"Movisearch", 
+            "resume":"Usado en la Api,Logica de la web, como microservicio web con manejo de la base de datos mediante hibernate", 
+            "link":"asaa" 
+          } 
+      ]          
+     }, 
+     "Mysql":{ 
+      "image": "/assets/images/logo/mysql.png", 
+      "projects":[ 
+          { 
+            "name":"ElecIdea Api & App Web", 
+            "resume":"Almacena los datos de la aplicacion de escritorio como de la app web.", 
+            "link":"sdsd" 
+          }, 
+          { 
+            "name":"Movisearch", 
+            "resume":"Almacena los datos de la aplicacion web, y ", 
+            "link":"asaa" 
+          } 
+      ]          
+     } 
+  } 
