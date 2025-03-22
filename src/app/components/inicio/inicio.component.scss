@@ -178,6 +178,16 @@
         }
     }
 }
+#subtitulo{
+    text-align: center; 
+    margin: 0px; 
+    padding: 0px;
+    position: relative;
+    top: -8px;
+    color: rgb(theme.$white, 0.6);
+    font-style: italic;
+    font-size: 12px;
+}
 @media (max-width: 850px) {
     
     .medio-container{
@@ -249,6 +259,12 @@
         height: 40px;
         font-size: 14px;
         margin: 0px;
+    }
+    #subtitulo{
+        top: -25px;
+        color: rgb(theme.$white, 0.6);
+        font-style: italic;
+        font-size: 11px;
     }
     
 }
