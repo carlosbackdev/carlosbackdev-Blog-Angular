@@ -7,7 +7,7 @@
             <h4>Principales</h4>
             <ul>
                 @for (skill of skillPrincipal; track $index) {
-                    <li>
+                    <li  (click)="openSkillModal()">
                         @if(skill.name.toLowerCase() !== 'typescript'){
                             <img src="{{skill.image}}" alt="{{skill.name}}" title="{{skill.name}}">                        }
                         @if(skill.name === 'TypeScript'){
@@ -21,7 +21,7 @@
             <h4>Bases</h4>
             <ul>
                 @for (base of bases; track $index) {
-                    <li>
+                    <li (click)="openSkillModal()">
                         <img src="{{base.image}}" title="{{base.name}}" alt="{{base.name}}">
                     </li>
                 }
@@ -47,3 +47,8 @@
         </div>
     </div>
 </section>
+
+<app-skill-detail    
+[showModal]="showSkillModal"
+(showModalChange)="showSkillModal = $event">
+</app-skill-detail>

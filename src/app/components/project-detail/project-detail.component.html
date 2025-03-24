@@ -11,9 +11,10 @@
         <p>{{ project?.descripcion }}</p>
         <div class="tecnologias">
             <h4 style="text-align: center;">Tecnologías</h4>
-            <img *ngFor="let tech of project?.tecnology" class="logo" [src]="tech.image" [alt]="tech.name" [title]="tech.name">
+            <img *ngFor="let tech of project?.tecnology" class="logo" [src]="tech.image" [alt]="'logo ' + tech.name" [title]="'logo ' + tech.name">
         </div>
-          <markdown class="text" [data]="project?.explication"></markdown>  
+          <markdown class="text" [data]="project?.explication"></markdown>
+          <img class="captura" [src]="project?.images?.[1]?.image"  [alt]="'captura ' + project?.title" [title]="'captura ' +project?.title"> 
       </article>      
     </div>
 </section>

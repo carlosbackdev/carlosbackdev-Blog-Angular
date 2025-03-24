@@ -1,0 +1,8 @@
+<section class="modal-project" *ngIf="showModal" (click)="closeModal()">
+    <button class="close" alt="Cerrar proyecto" title="Cerrar proyecto" (click)="closeModal()">
+        <i class="bi bi-x-square"></i>
+      </button>
+    <div class="modal-container" (click)="$event.stopPropagation()">
+        hola
+    </div>
+</section>

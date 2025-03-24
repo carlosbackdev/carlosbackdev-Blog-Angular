@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { SkillPrincipal } from '../../interfaces/config/skill-config.interfaces';
 import { HttpClient } from '@angular/common/http';
+import { SkillDetailComponent } from "../skill-detail/skill-detail.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tecnology',
-  imports: [],
+  imports: [SkillDetailComponent, CommonModule],
   templateUrl: './tecnology.component.html',
   styleUrl: './tecnology.component.scss'
 })
@@ -13,6 +15,7 @@ export class TecnologyComponent {
   bases: SkillPrincipal[] = [];
   interfaces: SkillPrincipal[] = [];
   sistemas: SkillPrincipal[] = [];
+  showSkillModal: boolean = false;
 
   constructor(private http: HttpClient){}
 
@@ -28,5 +31,13 @@ export class TecnologyComponent {
       } 
     }); 
   }
+
+    openSkillModal( ) {
+      this.showSkillModal = true;
+    }
+  
+    closeSkillModal() {
+      this.showSkillModal = false;
+    }
 
 }
