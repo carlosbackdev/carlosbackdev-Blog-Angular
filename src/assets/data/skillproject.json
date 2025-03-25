@@ -1,52 +1,44 @@
 { 
-    "java": 
+    "Java": 
       {  
-        "image": "/assets/images/logo/java.png", 
+        "image": "/assets/images/logo/java.png",
+        "resume":"Lenguaje de programación orientada a objetos.",
         "projects":[ 
           { 
-            "name":"ElecIdea Api & App Web", 
-            "resume":"Usado en la Api, en Spring boot, para el microservicio web", 
-            "link":"sdsd" 
+            "id":"2"
           }, 
           { 
-            "name":"Movisearch", 
-            "resume":"Usado en la Api, en Spring boot, para el microservicio web", 
-            "link":"asaa" 
+            "id":"1"
           }, 
           { 
-            "name":"ElecIdea software ERP desktop", 
-            "resume":"Usado para crear tanto el backend y la intefaz gráfica con swing", 
-            "link":"asaa" 
+            "id":"3"
           } 
       ]  
      }, 
      "Spring Boot":{ 
-      "image": "/assets/images/logo/spring.png", 
+      "image": "/assets/images/logo/spring.png",
+      "resume":"Framework para construir Apis y microservicios mediante Java.",
       "projects":[ 
           { 
-            "name":"ElecIdea Api & App Web", 
-            "resume":"Usado en la Api,Logica de la web, como microservicio web con manejo de la base de datos mediante hibernate", 
-            "link":"sdsd" 
+            "id":"2"
           }, 
           { 
-            "name":"Movisearch", 
-            "resume":"Usado en la Api,Logica de la web, como microservicio web con manejo de la base de datos mediante hibernate", 
-            "link":"asaa" 
+            "id":"1"
           } 
       ]          
      }, 
-     "Mysql":{ 
-      "image": "/assets/images/logo/mysql.png", 
+     "MySql":{ 
+      "image": "/assets/images/logo/mysql.png",
+      "resume":"Base de datos relacional.",
       "projects":[ 
           { 
-            "name":"ElecIdea Api & App Web", 
-            "resume":"Almacena los datos de la aplicacion de escritorio como de la app web.", 
-            "link":"sdsd" 
+            "id":"2"
           }, 
           { 
-            "name":"Movisearch", 
-            "resume":"Almacena los datos de la aplicacion web, y ", 
-            "link":"asaa" 
+            "id":"1"
+          }, 
+          { 
+            "id":"3"
           } 
       ]          
      } 

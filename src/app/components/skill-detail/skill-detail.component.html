@@ -1,8 +1,25 @@
 <section class="modal-project" *ngIf="showModal" (click)="closeModal()">
     <button class="close" alt="Cerrar proyecto" title="Cerrar proyecto" (click)="closeModal()">
-        <i class="bi bi-x-square"></i>
-      </button>
+        Cerrar  
+    </button>
     <div class="modal-container" (click)="$event.stopPropagation()">
-        hola
+      <div class="logo">
+        <img [src]="techImage" [alt]="'logo de '+ tecnology" [title]="'logo de '+ tecnology">
+      </div>  
+      <h2>{{ tecnology }}</h2>
+      <p>{{resumen}}</p>
+      <h3>Proyectos relacionados</h3>
+      <ul>
+        <li *ngFor="let project of projects" (click)="openProjectModal(project)">
+          <h4>{{ project.title }}</h4>
+          <img [src]="project.images[1]?.image" alt="captura de proyecto {{ project.title }}" title="captura de proyecto {{project.title}}">
+        </li>
+      </ul>
     </div>
-</section>
+  </section>
+  
+  <app-project-detail
+    [showModal]="showProjectModal"
+    [project]="selectedProject"
+    (showModalChange)="showProjectModal = $event">
+</app-project-detail>

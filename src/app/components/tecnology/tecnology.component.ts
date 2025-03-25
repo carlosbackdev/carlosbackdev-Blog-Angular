@@ -16,6 +16,7 @@ export class TecnologyComponent {
   interfaces: SkillPrincipal[] = [];
   sistemas: SkillPrincipal[] = [];
   showSkillModal: boolean = false;
+  tecnology: string="";
 
   constructor(private http: HttpClient){}
 
@@ -32,8 +33,9 @@ export class TecnologyComponent {
     }); 
   }
 
-    openSkillModal( ) {
+    openSkillModal(name: string ) {
       this.showSkillModal = true;
+      this.tecnology= name;
     }
   
     closeSkillModal() {

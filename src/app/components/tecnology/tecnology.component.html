@@ -7,7 +7,7 @@
             <h4>Principales</h4>
             <ul>
                 @for (skill of skillPrincipal; track $index) {
-                    <li  (click)="openSkillModal()">
+                    <li  (click)="openSkillModal(skill.name)">
                         @if(skill.name.toLowerCase() !== 'typescript'){
                             <img src="{{skill.image}}" alt="{{skill.name}}" title="{{skill.name}}">                        }
                         @if(skill.name === 'TypeScript'){
@@ -21,7 +21,7 @@
             <h4>Bases</h4>
             <ul>
                 @for (base of bases; track $index) {
-                    <li (click)="openSkillModal()">
+                    <li (click)="openSkillModal(base.name)">
                         <img src="{{base.image}}" title="{{base.name}}" alt="{{base.name}}">
                     </li>
                 }
@@ -30,7 +30,7 @@
             <h4>Interfaces y otras</h4>
             <ul>
                 @for (interfaz of interfaces; track $index) {
-                    <li>
+                    <li (click)="openSkillModal(interfaz.name)">
                         <img src="{{interfaz.image}}" title="{{interfaz.name}}" alt="{{interfaz.name}}">
                     </li>
                 }
@@ -39,7 +39,7 @@
             <h4>Sistemas y servidores</h4>
             <ul>
                 @for (sistema of sistemas; track $index) {
-                    <li>
+                    <li (click)="openSkillModal(sistema.name)">
                         <img src="{{sistema.image}}" title="{{sistema.name}}" alt="{{sistema.name}}">
                     </li>
                 }
@@ -50,5 +50,6 @@
 
 <app-skill-detail    
 [showModal]="showSkillModal"
+[tecnology]="tecnology"
 (showModalChange)="showSkillModal = $event">
 </app-skill-detail>

@@ -10,6 +10,7 @@ export interface ProjectConfig{
     explication:string;
     tecnology: SkillPrincipal[];
     onClick?: () => any
+    id?: number;
 }
 export interface ProjectImages{
     image:string;

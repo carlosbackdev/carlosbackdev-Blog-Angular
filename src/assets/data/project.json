@@ -7,13 +7,14 @@
           "image": "/assets/images/project/moviesearch.png"
         },
         {
-          "image": "/assets/images/project/other-image.webp"
+          "image": "/assets/images/project/capturaMovieSearch.png"
         }
       ],
       "repository": "https://github.com/carlosbackdev/MoviSearch",
       "link": "https://moviesearch.es",
       "descripcion": "Una aplicación de recomendaciones de películas basada en las preferencias del usuario.",
       "explication":"",
+      "id":1,
       "tecnology": [
         {
           "name": "Java",
@@ -44,9 +45,10 @@
         }
       ],
       "repository": "https://github.com/carlosbackdev/ElecIdea-Web-App",
-      "link": "https://www.elecidea.com/",
+      "link": "https://www.elecidea.com",
       "descripcion": "Elecidea es una solución empresarial integral para el sector eléctrico, que incluye una API RESTful construida con Spring Boot, un frontend en JavaScript y una base de datos MySQL alojada en Google Cloud. El sistema utiliza una arquitectura basada en microservicios con contenedores Docker y despliegue continuo, optimizando la escalabilidad, mantenimiento y eficiencia operativa.",
       "explicacion": "Elecidea es el backend de la aplicación web. Esta API conecta el frontend con la base de datos compartida, ampliando las funcionalidades de la aplicación de escritorio al entorno web, aprovechando la funcionalidad existente de la aplicación de escritorio y ampliando el servicio a través de la web.\n\n### Características Principales:\n- Gestión de lógica de datos entre el frontend y la base de datos.\n- Construcción basada en Spring Boot, con **arquitectura RESTful.**\n- **Controller**: Gestiona la interfaz REST.\n- **Service**: Implementa la lógica de negocio.\n- **Repository**: Interactúa con la base de datos.\n\n### Tecnologías Utilizadas:\n- **Spring Boot** y **Java Maven** para el desarrollo central de la aplicación.\n- **MySQL** alojado en **Google Cloud SQL**.\n- **Docker**: Contenerización de la aplicación.\n- **Json y Postman**: Para las solicitudes de las conexiones back front.\n- **Railway** para despliegue continuo desde el repositorio.\n\n---\n\n**Aplicación Web Elecidea**\n\nWeb para gestionar clientes y facturas eléctricas, heredando funcionalidades de la aplicación Elecidea. La web permite a los usuarios acceder a la plataforma desde cualquier dispositivo con conexión a Internet, facilitando la gestión de clientes y facturas en línea. Es la parte frontend del API Rest.\n\n### Características Principales:\n- Registro y gestión de usuarios.\n- Visualización de clientes, facturas y proyectos.\n- Seguimiento financiero de la empresa.\n- Pasarela de pago para facturas online.\n\n### Tecnologías Utilizadas:\n- **JavaScript**: Para realizar las solicitudes **Get/Post** al Backend.\n- **HTML y CSS**: Estructuración de páginas web y su diseño.\n- **Netlify** para despliegue continuo desde el repositorio.\n\n### Utilidad:\nElecidea optimiza la gestión empresarial en el sector eléctrico, facilitando la facturación, organización de clientes y proyectos, y el seguimiento financiero. Ofrece una solución integral para mejorar la productividad y la comunicación con los clientes.",
+      "id":2,
       "tecnology": [
         {
           "name": "Spring Boot",
@@ -87,9 +89,10 @@
         }
       ],
       "repository": "https://github.com/carlosbackdev/ElecIdea-App-Desktop-Java",
-      "link": "https://www.elecidea.com/",
+      "link": "https://www.elecidea.com",
       "descripcion": "Aplicación de escritorio desarrollada en Java y MySQL, diseñada específicamente para gestionar funciones clave en el sector eléctrico. El sistema es una solución <strong>CRUD</strong>, que permite una gestión eficiente de diversas operaciones empresariales.",
       "explication": "### Características Principales:\n- **Gestión de Facturas**: Administra fácilmente las facturas de los clientes, visualiza el estado de los pagos y genera documentos de facturación.\n- **Gestión de Clientes**: Almacena y realiza un seguimiento de la información detallada de los clientes, facilitando la administración de cada cuenta.\n- **Gestión de Proyectos**: Monitorea y sigue el progreso de los proyectos en curso, incluyendo los aspectos financieros y las etapas de finalización.\n- **Automatización de Facturas**: Exporta automáticamente las facturas en formato Excel y envíalas por correo electrónico a los clientes, optimizando el proceso de facturación.\n- **Seguimiento del Crecimiento Empresarial**: Realiza un seguimiento de la evolución de los clientes y el crecimiento del negocio, facilitando la toma de decisiones estratégicas.\n\n### Tecnologías Utilizadas:\n- **Java** para el desarrollo central de la aplicación.\n- **MySQL** para la gestión de la base de datos.\n- **Swing** para la interfaz gráfica de usuario (GUI).\n- **Flatlaf** para un diseño moderno de tema oscuro.\n- **Apache POI** para generar documentos en formato XLSX.\n- **JavaMail** para el envío automático de correos electrónicos.\n- **Java Ant** para la compilación y construcción de la aplicación.\n- **NetBeans** como entorno de desarrollo.\n\n### Utilidad:\nLa aplicación está diseñada para agilizar los procesos empresariales en el sector eléctrico, ofreciendo una solución integral para la facturación, gestión de clientes y seguimiento de proyectos. El sistema permite una gestión de datos fácil y una comunicación eficiente con los clientes, incluyendo el envío automático de facturas.",
+      "id":3,
       "tecnology": [
         {
           "name": "Java",
