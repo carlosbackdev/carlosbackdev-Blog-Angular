@@ -59,6 +59,8 @@
         margin-bottom: 20px;
         border-top: theme.$border-bottom;
         padding-top: 30px;
+        color: theme.$yellow;
+        font-family: theme.$font-console;
 
       }
       article{
@@ -76,13 +78,17 @@
           margin-bottom: 35px;
           padding-bottom: 50px;
           border-bottom: theme.$border-bottom;
+          font-family: theme.$font-fira;
+          font-size: 14px;
         }
       }
   
       p {
-        font-size: 1rem;
+        font-size: 13px;
         opacity: 0.8;
         margin-bottom: 15px;
+        font-family: theme.$font-fira;
+
       }
   
       .tecnologias {
@@ -103,6 +109,8 @@
         h4 {
           width: 100%;
           font-size: 1.2rem;
+          color: theme.$yellow;
+          font-family: theme.$font-console;
         }
   
         .logo {
@@ -145,12 +153,13 @@
         }
     
         p {
-          font-size: 0.9rem;
+          font-size: 11px;
         }
     
         .tecnologias {
           width: auto;
           .logo {
+            position: static;
             width: 35px;
             height: 35px;
           }
@@ -162,7 +171,17 @@
             padding-left: 3px;
           }
           .text{
+            padding-top: 28px;
+            font-size: 12px;
             scale: 0.95;
+            position: relative;
+            top: -66px;
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+          }
+          img{
+            position: relative;
+            top: -66px;
           }
         }
       }

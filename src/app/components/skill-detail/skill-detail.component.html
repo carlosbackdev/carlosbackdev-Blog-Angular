@@ -8,10 +8,11 @@
       </div>  
       <h2>{{ tecnology }}</h2>
       <p>{{resumen}}</p>
-      <h3>Proyectos relacionados</h3>
+      <h3 *ngIf="projects.length > 1">Proyectos relacionados</h3>
+      <h3 *ngIf="projects.length < 1">Utilización continua</h3>
       <ul>
         <li *ngFor="let project of projects" (click)="openProjectModal(project)">
-          <h4>{{ project.title }}</h4>
+          <div class="title-project"><h4>{{ project.title }}</h4></div>
           <img [src]="project.images[1]?.image" alt="captura de proyecto {{ project.title }}" title="captura de proyecto {{project.title}}">
         </li>
       </ul>

@@ -15,6 +15,8 @@ export class ProjectDetailComponent {
   @Input() showModal: boolean = false;
   @Input() project: ProjectConfig | null = null; 
   @Output() showModalChange = new EventEmitter<boolean>(); 
+  showSkillModal: boolean = false;
+  tecnology: string="";
  
   constructor(private http: HttpClient,public sanitizer: DomSanitizer) {}
 
@@ -27,6 +29,15 @@ export class ProjectDetailComponent {
   closeModal() {
     this.showModal = false;
     this.showModalChange.emit(this.showModal);
+  }
+
+  openSkillModal(name: string ) {
+    this.showSkillModal = true;
+    this.tecnology= name;
+  }
+
+  closeSkillModal() {
+    this.showSkillModal = false;
   }
 
 }

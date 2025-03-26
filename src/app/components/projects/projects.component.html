@@ -6,6 +6,12 @@
         <ul>
         @for (project of projectConfig; track $index) {
             <li>
+                @if(project.id == 1){
+                    <div class="new">Nuevo</div>
+                }
+                @if(project.id != 1){
+                    <div style="opacity: 0;" class="new">nuevo</div>
+                }
                 <div class="boton" (click)="openProjectModal(project)">
                     <div class="luz"></div>
                     <div class="contenedor-imagen">

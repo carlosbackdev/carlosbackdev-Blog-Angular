@@ -3,24 +3,24 @@
     { "name": "Java", "image": "/assets/images/logo/java.png", "title": "Java"},
     { "name": "Spring Boot", "image": "/assets/images/logo/spring.png", "title": "Spring boot" },
     { "name": "Angular", "image": "/assets/images/logo/angular.png", "title": "Angular" },
-    { "name": "TypeScript", "image": "/assets/images/typescript.png", "title": "typescript" }
+    { "name": "TypeScript", "image": "/assets/images/logo/typescript.png", "title": "typescript" }
   ],
   "bases":[
     { "name": "MySql", "image": "/assets/images/logo/mysql.png", "title": "MySql" },
-    { "name": "Pl/Sql", "image": "/assets/images/plsql.png", "title": "Pl/Sql" },
-    { "name": "MongoDB", "image": "/assets/images/mongologo.png", "title": "MongoDB" },
-    { "name": "FireBase", "image": "/assets/images/fire.png", "title": "FireBase" }
+    { "name": "Pl/Sql", "image": "/assets/images/logo/plsql.png", "title": "Pl/Sql" },
+    { "name": "MongoDB", "image": "/assets/images/logo/mongo.png", "title": "MongoDB" },
+    { "name": "FireBase", "image": "/assets/images/logo/fire.png", "title": "FireBase" }
   ],
     "otras":[
     { "name": "JavaScript", "image": "/assets/images/logo/javascript.png", "title": "MySql" },
-    { "name": "IA Integration", "image": "/assets/images/ia.webp", "title": "IA Integration" },
-    { "name": "Html", "image": "/assets/images/html5logo.png", "title": "Html" },
-    { "name": "Css", "image": "/assets/images/csslogo.png", "title": "css" }
+    { "name": "IA Integration", "image": "/assets/images/logo/ia.webp", "title": "IA Integration" },
+    { "name": "Html", "image": "/assets/images/logo/html.png", "title": "Html" },
+    { "name": "Css", "image": "/assets/images/logo/css.png", "title": "css" }
   ],
   "sistemas":[
-  { "name": "Ubuntu", "image": "/assets/images/ubuntulogo.webp", "title": "Ubuntu" },
-  { "name": "Windows Server", "image": "/assets/images/windowslogo.webp", "title": "Windows Server" },
-  { "name": "Cisco", "image": "/assets/images/ciscologo.png", "title": "Cisco" }
+  { "name": "Ubuntu", "image": "/assets/images/logo/ubuntu.webp", "title": "Ubuntu" },
+  { "name": "Windows Server", "image": "/assets/images/logo/windows.webp", "title": "Windows Server" },
+  { "name": "Cisco", "image": "/assets/images/logo/cisco.png", "title": "Cisco" }
 ]
   
 }

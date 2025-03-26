@@ -6,6 +6,7 @@ import { ProjectDetailComponent } from '../project-detail/project-detail.compone
 
 @Component({
   selector: 'app-skill-detail',
+  standalone: true,
   imports: [CommonModule, ProjectDetailComponent],
   templateUrl: './skill-detail.component.html',
   styleUrl: './skill-detail.component.scss'

@@ -7,7 +7,7 @@
     text-align: center;
     font-size: 17px;
     font-family: theme.$font-console;
-    color: theme.$white;
+    color: theme.$yellow;
     h3{
         all: unset;
         font-size: 40px;
@@ -32,7 +32,7 @@ ul{
         width: 400px;
         height: auto;
         padding: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
         .boton{
             cursor: pointer;
         }
@@ -148,7 +148,33 @@ ul{
 
     }
 }
-
+.new{
+        position:relative;
+        top: 10px;
+        width: fit-content;
+        margin: auto;
+        background-color: #FFD700;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+        animation: latido 1s infinite;
+        transform-origin: center center;
+        font-size: 14px;
+    }
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño para simular el latido */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 @media (max-width: 850px){
     .titulo-container{
@@ -164,7 +190,7 @@ ul{
         li{
 
             padding: 0px;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             scale: 0.85;
     
             .luz{

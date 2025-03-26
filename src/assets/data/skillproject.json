@@ -2,7 +2,7 @@
     "Java": 
       {  
         "image": "/assets/images/logo/java.png",
-        "resume":"Lenguaje de programación orientada a objetos.",
+        "resume":"Lenguaje de programación del alto nivel orientado a objetos, para desarollar software y aplicaciones Backend.",
         "projects":[ 
           { 
             "id":"2"
@@ -14,18 +14,6 @@
             "id":"3"
           } 
       ]  
-     }, 
-     "Spring Boot":{ 
-      "image": "/assets/images/logo/spring.png",
-      "resume":"Framework para construir Apis y microservicios mediante Java.",
-      "projects":[ 
-          { 
-            "id":"2"
-          }, 
-          { 
-            "id":"1"
-          } 
-      ]          
      }, 
      "MySql":{ 
       "image": "/assets/images/logo/mysql.png",
@@ -41,5 +29,122 @@
             "id":"3"
           } 
       ]          
-     } 
+     }, 
+     "Angular":{ 
+      "image": "/assets/images/logo/angular.png",
+      "resume":"Framework Web para construción de aplicaciones web, mediante: TypeScript, Html y Css.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }, 
+          { 
+            "id":"2"
+          }
+      ]          
+     }, 
+     "Spring Boot":{ 
+      "image": "/assets/images/logo/spring.png",
+      "resume":"Framework para construción de microservicios y Apis, para manejar la lógica de una aplicacón Web, mediante Java.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }, 
+          { 
+            "id":"2"
+          }
+      ]          
+     }, 
+     "TypeScript":{ 
+      "image": "/assets/images/logo/typescript.png",
+      "resume":"Lenguaje de programación, es un 'SuperSet' de JavaScript utilizado para programar interfaces Web dinámicas y en sus partes de lado del servidor.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }
+      ]          
+     }, 
+     "Pl/Sql":{ 
+      "image": "/assets/images/logo/plsql.png",
+      "resume":"Base de datos relacional de Oracle, Programación de estas mediante procediminetos, funciones, triggers... para su administración y mantenimiento.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }
+      ]          
+     }, 
+     "MongoDB":{ 
+      "image": "/assets/images/logo/mongo.png",
+      "resume":"Base de datos no relacional. Obtención de datos en formatos Json para su 'transporte', usado para el consumo de datos en Api y App.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }
+      ]          
+     }, 
+     "FireBase":{ 
+      "image": "/assets/images/logo/fire.png",
+      "resume":"Herramienta de Google para autentificación y registro de usuarios, generación de tokens para manejo de peticiones seguras mediante http/https.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }
+      ]          
+     }, 
+     "JavaScript":{ 
+      "image": "/assets/images/logo/javascript.png",
+      "resume":"Lenguaje de programación, utilizado para programar interfaces Web dinámicas y en sus partes de servidor.",
+      "projects":[ 
+          { 
+            "id":"1"
+          },
+          {
+            "id":"2"
+          }
+      ]          
+     }, 
+     "IA Integration":{ 
+      "image": "/assets/images/logo/ia.webp",
+      "resume":"Consumo de la Api de OpenAi, para integrar la IA en los software y aplicaciones creadas y programadas, usada de manera muy especifica en algunas tareas dentro del programa.",
+      "projects":[ 
+          { 
+            "id":"1"
+          }
+      ]          
+     }, 
+     "Html":{ 
+      "image": "/assets/images/logo/html.png",
+      "resume":"Pseudolenguaje de etiquetado Web para la construción de su esquema, imprescindible para la ariquitectura de una web y el manejo de optimizaciones para SEO.",
+      "projects":[ 
+          { 
+            "id":"1"
+          },{
+            "id":"2"
+          }
+      ]          
+     },"Css":{ 
+      "image": "/assets/images/logo/css.png",
+      "resume":"Etiquetado para crear hojas de estilo y moldear en forma la arquitectura Web del html, imprescindible para crear una interfaz visualmente atractiva.",
+      "projects":[ 
+          { 
+            "id":"1"
+          },{
+            "id":"2"
+          }
+      ]          
+     },"Ubuntu":{ 
+      "image": "/assets/images/logo/ubuntu.webp",
+      "resume":"Sistema operativo de código abierto, importante para el despliegue de aplicaciones en diferentes máquinas y servidores",
+      "projects":[ 
+      ]          
+     },"Windows Server":{ 
+      "image": "/assets/images/logo/windows.webp",
+      "resume":"Sistema operativo y sistema para el manejo de servidores,dominios y redes. Importante para el despliegue de aplicaciones en diferentes máquinas y servidores",
+      "projects":[ 
+      ]          
+     },"Cisco":{ 
+      "image": "/assets/images/logo/cisco.png",
+      "resume":"Para desarrollar redes empresariales.",
+      "projects":[ 
+      ]          
+     }
   } 
