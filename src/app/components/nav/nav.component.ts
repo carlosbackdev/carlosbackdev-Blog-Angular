@@ -33,7 +33,7 @@ export class NavComponent {
   },
   {
     name: 'CONÓCEME', 
-    path: '', 
+    path: 'info', 
     icon: 'bi bi-person-fill',
     active: false,
   },

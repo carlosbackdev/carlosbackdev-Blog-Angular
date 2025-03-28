@@ -76,7 +76,6 @@
             button {
                 background: transparent;
                 border: none;
-                color: theme.$white;
                 font-size: 3rem;
                 cursor: pointer;
                 transition: color 0.3s ease-in-out;
@@ -87,7 +86,7 @@
                 svg{
                     width: 50px;
                     height: 50px;
-                    color: theme.$blue-text;
+                    color: theme.$yellow;
                     transition: all 0.22s ease-in-out;
                     &:hover {
                         color: theme.$app-primary;
