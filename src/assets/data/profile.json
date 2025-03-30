@@ -1,0 +1,36 @@
+{
+    "name":"CARLOS ARROYO",
+    "resume":"👋¡Hola! Soy Carlos Arroyo, joven desarrollador Backend. Estoy continuamente desarrollando mis proyectos y llevando a la práctica todo lo aprendido, cada vez que pongo me pongo en marcha mi incesable hambre de conocimiento me obliga a profundizar en todas las herramientas que lo rodean, ¡aunque siempre hay espacio para más en esta fiesta de la tecnología! Antes de meterme en el mundo del código, estuve en el lado físico de la tecnología. Donde nació la necesidad de aprender más sobre la magia detrás de cada byte. Todo ello me impulsó a dar el salto al desarrollo. 💻🚀Mi misión: contribuir en proyectos colaborativos en entornos laborales, sí, aunque trabajar solo a veces suena bien, quiero compañía!!😄 Aun así, mi camino no se detendrá, y seguiré explorando el vasto universo de la tecnología. ¡Gracias por pasar y espero que podamos crear algo genial juntos!🫶",
+    "image":"",
+    "experience":[
+        {
+            "title":"Electricista industrial data center en Sazepi SL.",
+            "functions":[                
+                    "Instalación de líneas eléctricas y de comunicaciones",
+                    "Mantenimiento Racks"
+            ]
+        },
+        {
+            "title":"Técnico electricista en Alcaraz IET",
+            "functions":[                
+                    "Instalación, mantenimiento eléctrico y de telecomunicaciones en oficinas",
+                    "Conexionado de Racks"                
+            ]
+        }
+    ],
+    "education":[
+        {
+            "title":"Grado Superior en Desarrollo Aplicaciones Multiplataforma en Digitech FP.",
+            "details":[                
+                    "Cursando actualmente"
+                ]
+        },
+        {
+            "title":"Instalaciones eléctricas y automáticas",
+            "details":[                
+                    "Automatismos industriales",
+                    "Técnico electricista y en telecomunicaciones"
+                ]
+        }]
+        
+}

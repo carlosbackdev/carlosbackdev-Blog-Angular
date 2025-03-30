@@ -1,1 +1,55 @@
-<p>informacion works!</p>
+<section>
+    <div class="titulo-container">
+        <h3>CONÓCEME</h3>
+    </div>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <div class="foto-container">
+                <div class="foto">
+
+                </div>
+                <ul>
+                    @if(experience){
+                        <div class="exp">
+                            <h4>Experiencia</h4>
+                            <li *ngFor="let job of experience">
+                                <div class="title">
+                                    {{job.title}}
+                                </div>
+                                <ul>
+                                    <li *ngFor="let funcion of job.functions">
+                                        - {{funcion}}
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                    }
+                    @if(education){
+                        <div class="edu">
+                            <h4>Educación</h4>
+                            <li *ngFor="let edu of education">
+                                <div class="title">
+                                    {{edu.title}}
+                                </div>
+                                <ul>
+                                    <li *ngFor="let detail of edu.details">
+                                       - {{detail}}
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                    }
+                </ul>
+            </div>
+            <div class="info-container">
+                @if(profile){
+                    <h4>{{profile.name}}</h4>
+                    <p>{{profile.resume}}</p>
+                }
+            </div>
+        </div>
+        <div class="decargas">
+            descargas
+        </div>
+    </div>
+</section>
