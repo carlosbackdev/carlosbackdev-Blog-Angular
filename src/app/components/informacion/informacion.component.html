@@ -44,12 +44,28 @@
             <div class="info-container">
                 @if(profile){
                     <h4>{{profile.name}}</h4>
-                    <p>{{profile.resume}}</p>
+                    <markdown class="text" [data]="profile.resume"></markdown>
                 }
             </div>
         </div>
-        <div class="decargas">
-            descargas
+        <div class="descargas">
+            <ul>
+                <li>
+                    <button class="boton">
+                        <a href="download/Carlos Arroyo CV.pdf" download="Carlos_Arroyo_CV" title="descargar mi curriculum">Descarga CV</a>
+                    </button>
+                </li>
+                <li>
+                    <button class="boton">
+                        <a href="download/Carlos Arroyo CV.pdf" download="Carlos_Arroyo_CV" title="descargar mi curriculum">Descarga Certificaciones</a>
+                    </button>
+                </li>
+                <li>
+                    <button class="boton">
+                        <a href="download/Carlos Arroyo CV.pdf" download="Carlos_Arroyo_CV" title="descargar mi curriculum">Contacto</a>
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

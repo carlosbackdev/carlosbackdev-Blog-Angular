@@ -24,6 +24,7 @@ section{
     position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-items: center;
     gap: 20px;
 
     .tarjeta {
@@ -109,9 +110,72 @@ section{
                 margin-bottom: 20PX;
                 text-align: center;
             }
-            p{
+            .text{
                 color: theme.$white;
                 font-family: theme.$font-fira;
+            }
+        }
+    }
+    .descargas{
+        width: 86%;
+        border-radius: 10px;
+        margin: auto;
+        background: theme.$linear-gradiante2;
+        font-family: theme.$font-fira;
+        color: theme.$white;
+        font-size: 20px;
+        border-top: theme.$border-bottom;
+        border-bottom: theme.$border-bottom;
+
+        ul{
+            all: unset;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            padding-right: 15px;
+            justify-content: space-between;
+            gap: 80px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            li{
+                margin: auto;
+                h2{
+                    font-weight: 550;
+                }
+                span{
+                    color: theme.$blue-text;
+                }
+            }
+        }
+    }
+    .boton{
+        all: unset;
+        display: flex    ;
+        width: 170px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 13px;
+        cursor: pointer;
+        font-size: 17px;
+        background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, rgb(20, 53, 87) -30%, rgba(12, 31, 51, 0.8) 89%);
+        box-shadow: 0 0 5px rgba(24, 101, 245, 0.5), 0 0 8px rgba(24, 101, 245, 0.5), 0 0 9px rgba(24, 101, 245, 0.5);
+        transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+        text-align: center;
+        a{
+            text-decoration: none;
+            color: theme.$white;
+            transition: color 0.3s ease-in-out;
+    
+        }
+        &:hover {
+            box-shadow: 0 0 8px rgba(24, 101, 245, 0.8), 0 0 10px rgba(24, 101, 245, 0.8), 0 0 18px rgba(24, 101, 245, 0.8);
+            transform: scale(1.05); 
+    
+            a {
+                color: theme.$blue-text;
             }
         }
     }
@@ -179,7 +243,7 @@ section{
                 h4{
                     font-size: 22px;
                 }
-                p{
+                .text{
                     color: theme.$white;
                     font-family: theme.$font-fira;
                     font-size: 13.5px;

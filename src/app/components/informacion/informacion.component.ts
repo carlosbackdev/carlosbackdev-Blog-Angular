@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Education, Experience, UserProfile } from '../../interfaces/config/profile-config.iterfaces';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-informacion',
-  imports: [CommonModule],
+  imports: [CommonModule,MarkdownModule],
   templateUrl: './informacion.component.html',
   styleUrl: './informacion.component.scss'
 })
