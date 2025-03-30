@@ -250,6 +250,28 @@ section{
                     padding: 2px;
                 }
             }
+            
+        }
+        .descargas{
+            width: 95%;
+            margin-top: 60px;
+
+    
+            ul{
+                padding-left: 0px;
+                padding-right: 0px;
+                gap: 30px;
+
+                li{
+                    margin: auto;
+                    h2{
+                        font-weight: 550;
+                    }
+                    span{
+                        color: theme.$blue-text;
+                    }
+                }
+            }
         }
     }    
 }

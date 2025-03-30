@@ -39,7 +39,7 @@ export class NavComponent {
   },
   {
     name: 'CONTACTO',
-    path: '',
+    path: 'social',
     icon:'bi bi-send-fill',
     active: false
   },]
