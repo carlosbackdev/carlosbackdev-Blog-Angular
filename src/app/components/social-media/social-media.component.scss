@@ -15,6 +15,68 @@
         padding-bottom: 5px;
     }
 }
+.contacto-email {
+    margin-top: 75px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    .email {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 480px;
+      height: 60px;
+      border-radius: 5px;
+      box-shadow: rgba(24, 101, 245, 0.5) 0px 0px 5px,
+                  rgba(24, 101, 245, 0.5) 0px 0px 8px,
+                  rgba(24, 101, 245, 0.5) 0px 0px 9px;
+      background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, 
+                                            rgb(20, 53, 87) -30%, 
+                                            rgba(12, 31, 51, 0.8) 89%);
+     transition: all 0.1s ease-in-out;
+     &:hover{
+        background: radial-gradient(circle, rgba(20, 20, 20, 0) -25%, 
+        rgb(28, 75, 120) -20%, 
+        rgba(15, 40, 65, 0.9) 90%);
+        box-shadow: rgba(24, 101, 245, 0.8) 0px 0px 10px, 
+        rgba(24, 101, 245, 0.8) 0px 0px 15px, 
+        rgba(24, 101, 245, 0.8) 0px 0px 18px;
+     }
+
+     p{
+        font-family: theme.$font-fira;
+        font-size: 20px;
+        margin: 0px;
+        color: theme.$white;
+     }
+    }
+  
+    .copiarmail {
+      display: grid;
+      width: 60px;
+      height: 60px;
+      margin-left: 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: rgba(24, 101, 245, 0.5) 0px 0px 5px,
+                  rgba(24, 101, 245, 0.5) 0px 0px 8px,
+                  rgba(24, 101, 245, 0.5) 0px 0px 9px;
+      background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, 
+                                            rgb(20, 53, 87) -30%, 
+                                            rgba(12, 31, 51, 0.8) 89%);
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        scale: 1.1;
+      }  
+    }
+  }
+  
 
 @media (max-width: 1200px) {
 
