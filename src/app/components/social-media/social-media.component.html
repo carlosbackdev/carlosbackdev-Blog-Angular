@@ -4,11 +4,23 @@
     </div>
     <div class="contacto-email">
         <div class="email">
-          <p class="p-sobremi">carlosbackdevgmail.com</p>
+          <p class="p-sobremi">carlosbackdev&#64;gmail.com</p>
         </div>
         <div class="copiarmail" (click)="copiarEmail()">
-          <img src="assets/images/copy.png" alt="Copiar" title="Copiar">
+          <img style="width: 100%; scale: 1.2;" src="assets/images/social/gmail.webp" alt="Copiar" title="Copiar">
         </div>
       </div>
-      
+      <div class="social-container">
+      @for(item of social; track $index){
+        <div class="square">
+            <a href="{{item.link}}" target="_blank" rel="nofollow" title="ir a ver {{item.title}}">
+                @if(item.title == 'Linkedin' || item.title == 'GitHub' || item.title=='ElecIdea'){
+                    <img src="{{item.logo}}" alt="logo de {{item.title}}" title="logo de {{item.title}}" style="scale: 1.2;">
+                }@else{
+                    <img src="{{item.logo}}" alt="logo de {{item.title}}" title="logo de {{item.title}}">
+                }
+            </a>
+        </div>
+      }
+      </div>
 </section>

@@ -1,0 +1,113 @@
+@use '../../../themes/theme.scss' as theme;
+
+.footer-container {
+    width: 100%;
+    background: theme.$linear-gradiante2;
+    padding: 40px 0;
+    color: theme.$white;
+    text-align: center;
+    font-family: theme.$font-fira;
+    border-top: theme.$border-bottom;
+}
+
+.footer-content {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 18px;
+    a {
+        color: theme.$blue-text;
+        text-decoration: none;
+    }
+}
+
+.footer-logos {
+    display: flex;
+    gap: 15px;
+    img {
+        width: 50px;
+        height: auto;
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    a{
+        all: unset;
+    }
+    .title{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        margin-left: 15px;
+        cursor: pointer;
+        font-family: theme.$font-head;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            scale: 1.1;
+        }
+        .h2color1{
+            color: theme.$white;
+        }
+        .h2{
+            color: theme.$app-primary;
+            margin-bottom: 0px;
+            font-weight: bold;
+            line-height: 1;
+        }
+    }
+}
+
+.footer-info {
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    blockquote {
+        margin-top: 40px;
+        font-style: italic;
+        font-size: 14px;
+        color: theme.$yellow;
+    }
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    li {
+        a {
+            text-decoration: none;
+            color: theme.$white;
+            transition: color 0.3s;
+            &:hover {
+                color: theme.$blue-text;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-logos img {
+        width: 40px;
+    }
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

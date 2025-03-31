@@ -25,6 +25,8 @@ section{
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
+    width: 86%;
+    margin: auto;
     gap: 20px;
 
     .tarjeta {
@@ -118,7 +120,7 @@ section{
         }
     }
     .descargas{
-        width: 86%;
+        width: 95%;
         border-radius: 10px;
         margin: auto;
         background: theme.$linear-gradiante2;
@@ -275,4 +277,10 @@ section{
             }
         }
     }    
+}
+
+@media (max-width: 800px){
+    .contenedor{
+        width: 98%;
+    }
 }

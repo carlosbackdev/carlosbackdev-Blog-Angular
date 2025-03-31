@@ -6,10 +6,11 @@ import { TecnologyComponent } from "./components/tecnology/tecnology.component";
 import { ProjectsComponent } from "./components/projects/projects.component";
 import { InformacionComponent } from "./components/informacion/informacion.component";
 import { SocialMediaComponent } from "./components/social-media/social-media.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavComponent, InicioComponent, TecnologyComponent, ProjectsComponent, InformacionComponent, SocialMediaComponent],
+  imports: [RouterOutlet, NavComponent, InicioComponent, TecnologyComponent, ProjectsComponent, InformacionComponent, SocialMediaComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

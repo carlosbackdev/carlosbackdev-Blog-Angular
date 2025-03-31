@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Linkedin",
+      "logo": "/assets/images/social/linkedin.png",
+      "link":"www.linkedin.com/in/carlos-arroyo-dev"
+    },
+    {
+      "title": "GitHub",
+      "logo": "/assets/images/social/github.png",
+      "link":"https://github.com/carlosbackdev"
+    },
+    {
+      "title": "Whatsapp",
+      "logo": "/assets/images/social/whatsapp.png",
+      "link":"https://wa.me/34679966708/?text=Llamame%20o%20Escribeme!!!"
+    },
+    {
+      "title": "Bluesky",
+      "logo": "/assets/images/social/bluesky.png",
+      "link":"https://bsky.app/profile/carlosbackdev.com"
+    },
+    {
+      "title": "MovieSearch",
+      "logo": "/assets/images/social/moviesearch.png",
+      "link":"https://moviesearch.es"
+    },
+    {
+      "title": "ElecIdea",
+      "logo": "/assets/images/social/elecidea.png",
+      "link":"https://www.elecidea.com/"
+    }
+  ]
+  

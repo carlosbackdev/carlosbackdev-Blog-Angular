@@ -15,75 +15,151 @@
         padding-bottom: 5px;
     }
 }
+
 .contacto-email {
     margin-top: 75px;
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-  
+    gap: 20px;
+
     .email {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      width: 480px;
-      height: 60px;
-      border-radius: 5px;
-      box-shadow: rgba(24, 101, 245, 0.5) 0px 0px 5px,
-                  rgba(24, 101, 245, 0.5) 0px 0px 8px,
-                  rgba(24, 101, 245, 0.5) 0px 0px 9px;
-      background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, 
-                                            rgb(20, 53, 87) -30%, 
-                                            rgba(12, 31, 51, 0.8) 89%);
-     transition: all 0.1s ease-in-out;
-     &:hover{
-        background: radial-gradient(circle, rgba(20, 20, 20, 0) -25%, 
-        rgb(28, 75, 120) -20%, 
-        rgba(15, 40, 65, 0.9) 90%);
-        box-shadow: rgba(24, 101, 245, 0.8) 0px 0px 10px, 
-        rgba(24, 101, 245, 0.8) 0px 0px 15px, 
-        rgba(24, 101, 245, 0.8) 0px 0px 18px;
-     }
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 480px;
+        height: 60px;
+        border-radius: 5px;
+        box-shadow: rgba(24, 101, 245, 0.5) 0px 0px 9px;
+        background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, rgb(20, 53, 87) -30%, rgba(12, 31, 51, 0.8) 89%);
+        transition: all 0.1s ease-in-out;
+        
+        &:hover {
+            background: radial-gradient(circle, rgba(20, 20, 20, 0) -25%, rgb(28, 75, 120) -20%, rgba(15, 40, 65, 0.9) 90%);
+            box-shadow: rgba(24, 101, 245, 0.8) 0px 0px 18px;
+        }
 
-     p{
-        font-family: theme.$font-fira;
-        font-size: 20px;
-        margin: 0px;
-        color: theme.$white;
-     }
-    }
-  
-    .copiarmail {
-      display: grid;
-      width: 60px;
-      height: 60px;
-      margin-left: 20px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-      cursor: pointer;
-      box-shadow: rgba(24, 101, 245, 0.5) 0px 0px 5px,
-                  rgba(24, 101, 245, 0.5) 0px 0px 8px,
-                  rgba(24, 101, 245, 0.5) 0px 0px 9px;
-      background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, 
-                                            rgb(20, 53, 87) -30%, 
-                                            rgba(12, 31, 51, 0.8) 89%);
-      transition: all 0.2s ease-in-out;
-      &:hover{
-        scale: 1.1;
-      }  
-    }
-  }
-  
-
-@media (max-width: 1200px) {
-
-    .titulo-container {
-
-        h3 {
-            font-size: 35px;
+        p {
+            font-family: theme.$font-fira;
+            font-size: 20px;
+            margin: 0;
+            color: theme.$white;
         }
     }
+
+    .copiarmail {
+        display: grid;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: rgba(24, 101, 245, 0.5) 0px 0px 9px;
+        background: radial-gradient(circle, rgba(20, 20, 20, 0) -35%, rgb(20, 53, 87) -30%, rgba(12, 31, 51, 0.8) 89%);
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+            scale: 1.1;
+        }
+    }
+}
+
+.social-container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: fit-content;
+    gap: 60px;
+    margin-top: 120px;
+    padding-bottom: 120px;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(20, 20, 20, 0) -75%, rgb(41, 128, 185) 40%, rgba(8, 90, 184, 0.8) 85%);
+    box-shadow: 0 0 8px rgba(24, 101, 245, 0.5);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+        scale: 1.1;
+        box-shadow: rgba(24, 101, 245, 0.8) 0px 0px 18px;
+    }
+
+    a {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 83%;
+            height: 83%;
+        }
+    }
+}
+
+
+@media (max-width: 850px){
+    .titulo-container h3 {
+        font-size: 35px;
+    }
+    .contacto-email {
+        gap: 20px;
+    
+        .email {
+            width: fit-content;
+            padding-left: 20px;
+            padding-right: 20px;
+    
+            p {
+                font-size: 15px;
+            }
+        }
+    
+    }
+    
+    .social-container {
+        gap: 30px;
+        margin-top: 100px;
+        padding-bottom: 100px;
+        width: 86%;
+    }
+    
+    .square {
+        width: 86px;
+        height: 86px;
+        border-radius: 10px;
+        background: radial-gradient(circle, rgba(20, 20, 20, 0) -75%, rgb(41, 128, 185) 40%, rgba(8, 90, 184, 0.8) 85%);
+        box-shadow: 0 0 8px rgba(24, 101, 245, 0.5);
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+    
+        &:hover {
+            scale: 1.1;
+            box-shadow: rgba(24, 101, 245, 0.8) 0px 0px 18px;
+        }
+    
+        a {
+            all: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                width: 83%;
+                height: 83%;
+            }
+        }
+    }
+    
 }

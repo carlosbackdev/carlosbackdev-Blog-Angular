@@ -23,9 +23,6 @@ export class InformacionComponent {
         this.profile=data;
         this.education=data.education;
         this.experience=data.experience;
-        console.log("educacuin:",this.education);
-        console.log("expereivcia:",this.experience);
-        console.log("perfil:",this.profile)
       },error:(error)=>{
         console.error("error a cargar el pefil",error); 
       }

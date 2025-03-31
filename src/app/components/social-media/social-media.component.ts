@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { socialConfig } from '../../interfaces/social-config.interfaces';
+import { socialConfig } from '../../interfaces/config/social-config.interfaces';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -12,8 +12,16 @@ export class SocialMediaComponent {
   social: socialConfig[]=[];
   
   constructor(private http: HttpClient){}
+  ngOnInit(){
+    this.http.get<socialConfig[]>('/assets/data/social.json').subscribe({
+      next: (data) => {
+        this.social=data;
+      },error:(error)=>{
+        console.error('error al cargar social media',error);
+      }
+    });
+  }
 
-  this.http.get<socialConfig[]>(/assets)
 
   copiarEmail() {
     const email = 'carlosbackdev@gmail.com';
