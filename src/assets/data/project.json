@@ -4,10 +4,10 @@
       "video":"https://player.vimeo.com/video/1065072327?badge=0&autopause=0&player_id=0&app_id=58479",
       "images": [
         {
-          "image": "/assets/images/project/moviesearch.png"
+          "image": "/assets/images/project/moviesearch.webp"
         },
         {
-          "image": "/assets/images/project/capturaMovieSearch.png"
+          "image": "/assets/images/project/capturaMovieSearch.webp"
         }
       ],
       "repository": "https://github.com/carlosbackdev/MoviSearch",

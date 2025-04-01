@@ -233,7 +233,9 @@ li.discover {
             width: 86%;
             padding: 11px;
             .title{
-                display: none;
+                h2{
+
+                }
             }
         }
     
@@ -277,7 +279,8 @@ li.discover {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
+            width: 98%;
+            margin: auto;
             padding: 5px 15px;
             .title{
                 margin: auto;
