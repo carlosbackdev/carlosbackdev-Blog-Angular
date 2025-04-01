@@ -20,10 +20,15 @@
     width: 86%;
     margin: auto;
     margin-top: 50px;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 11%;
     .principal{
+        width: 100%;
         text-align: center;
         h4{
+            display: flex;
+            justify-content: center;
+            width: 100%;
             font-family: theme.$font-fira;
             color: theme.$white;
             padding: 7px;
