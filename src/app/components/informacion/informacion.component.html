@@ -8,11 +8,11 @@
                 <div class="foto">
 
                 </div>
-                <ul>
+                <div class="exp-container">
                     @if(experience){
                         <div class="exp">
                             <h4>Experiencia</h4>
-                            <li *ngFor="let job of experience">
+                            <div class="list" *ngFor="let job of experience">
                                 <div class="title">
                                     {{job.title}}
                                 </div>
@@ -21,13 +21,13 @@
                                         - {{funcion}}
                                     </li>
                                 </ul>
-                            </li>
+                            </div>
                         </div>
                     }
                     @if(education){
                         <div class="edu">
                             <h4>Educación</h4>
-                            <li *ngFor="let edu of education">
+                            <div class="list" *ngFor="let edu of education">
                                 <div class="title">
                                     {{edu.title}}
                                 </div>
@@ -36,10 +36,10 @@
                                        - {{detail}}
                                     </li>
                                 </ul>
-                            </li>
+                            </div>
                         </div>
                     }
-                </ul>
+                </div>
             </div>
             <div class="info-container">
                 @if(profile){
