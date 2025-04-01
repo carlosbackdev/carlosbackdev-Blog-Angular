@@ -1,0 +1,19 @@
+
+# Archivo robots.txt para el sitio de Carlos
+
+
+User-agent: *
+Disallow: /admin/         # Bloquea la carpeta de administración
+Disallow: /privado/       # Bloquea una carpeta privada
+Disallow: /test/          # Bloquea una carpeta de pruebas
+Disallow: /paginasecreta.html # Bloquea una página específica
+
+# Permitir que se indexen todas las demás partes del sitio
+Allow: /
+
+# Bloquear imágenes de Google
+User-agent: Googlebot-Image
+Disallow: /
+
+# Especificar el mapa del sitio (sitemap)
+Sitemap: https://www.carlosbackdev.com/sitemap.xml
