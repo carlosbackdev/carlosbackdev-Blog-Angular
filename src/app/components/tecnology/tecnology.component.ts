@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-tecnology',
   imports: [SkillDetailComponent, CommonModule],
   templateUrl: './tecnology.component.html',
-  styleUrl: './tecnology.component.scss'
+  styleUrl: './tecnology.component.scss',
 })
 export class TecnologyComponent {
   skillPrincipal: SkillPrincipal[] = [];

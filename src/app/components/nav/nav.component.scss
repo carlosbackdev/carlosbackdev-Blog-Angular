@@ -5,10 +5,14 @@
     justify-content: space-evenly;
     align-items: center;
     .nav-content{
+        position: fixed;
+        z-index: 100;
+        top: 0px;
         display: flex;
         justify-content: space-between;
-        width: 85.5%;
+        width: 86%;
         padding: 15px 0px;
+        background: rgb(13, 13, 20,0.6);
         padding-left: 10px;
         padding-right: 10px;
         border-bottom:theme.$border-bottom;
@@ -54,10 +58,10 @@
             font-family: theme.$font-fira;
             transition: all 0.3s ease-in-out;
             &:hover{
-                color: theme.$app-primary;
+                color: theme.$yellow;
 
                 i{
-                    color: theme.$app-primary; 
+                    color: theme.$yellow; 
                 }
             }
             i{
@@ -66,7 +70,7 @@
             }
         }
         .active-item{
-            color: theme.$app-primary;
+            color: theme.$yellow;
             i{
                 color: theme.$app-primary;
             }
@@ -264,7 +268,7 @@ li.discover {
     }
 
 }
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     .nav-bar-container {
         position: relative;
         margin-bottom: 3px;

@@ -16,4 +16,31 @@ import { FooterComponent } from "./components/footer/footer.component";
 })
 export class AppComponent {
   title = 'carlosbackdev';
+  ngAfterViewInit(): void {
+    this.initIntersectionObserver();
+  }
+
+  initIntersectionObserver(): void {
+    const observerOptions = {
+      root: null, // significa que se observa el viewport
+      rootMargin: '0px',
+      threshold: 0.1 // 10% de visibilidad
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Cuando la sección entra en la vista
+          entry.target.classList.add('visible');
+        } else {
+          // Cuando la sección sale de la vista
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observamos todas las secciones con la clase fade-in-section
+    const sections = document.querySelectorAll('.fade-in-section');
+    sections.forEach(section => observer.observe(section));
+  }
 }

@@ -1,6 +1,39 @@
-.tecnology,.projects,.info,.social{
+.borde{
     display: block;
+    width: 86%;
+    margin: auto;
     margin-top: 7vh;
     border-top: 4px solid rgb(35, 40, 51);
     margin-bottom: 7vh;
+}
+.borde-inicio{
+    display: block;
+    width: 86%;
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    scroll-margin-top: 80px;
+}
+@media (max-width: 850px) {
+  .borde{
+    width: 98%;
+}
+
+}
+.inicio{
+  display: block;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  scroll-margin-top: 80px;
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+  scroll-margin-top: 80px;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0); 
 }

@@ -2,11 +2,26 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VideoConfig } from '../../interfaces/config/video-config.interfaces';
 import { HttpClient } from '@angular/common/http';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.scss'
+  styleUrl: './inicio.component.scss',
+  animations: [
+    trigger('iframeFadeIn', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(50px)' }),  // Comienza con opacidad 0 y desplazado
+        animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))  // Aparece de manera suave
+      ])
+    ]),
+    trigger('buttonFadeIn', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(10px)' }),  // Comienza un poco desplazado
+        animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))  // Se muestra suavemente
+      ])
+    ])
+  ]
 })
 export class InicioComponent implements AfterViewInit {
   @ViewChild('prevVideoButton') prevVideoButton!: ElementRef;

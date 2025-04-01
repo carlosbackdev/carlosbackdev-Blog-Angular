@@ -46,10 +46,11 @@
                 box-shadow: 0 0 12px rgba(24, 101, 245, 0.5), 0 0 14px rgba(24, 101, 245, 0.5), 0 0 24px rgba(24, 101, 245, 0.5); 
                 position: relative;
                 margin: auto;
-
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
                 &:hover{
-                    background: radial-gradient(circle, rgba(20,20,20, 0) 55%, rgb(41, 128, 185) 70%, rgba(8, 90, 184, 0.8) 90%);
-                    box-shadow: 0 0 15px rgba(24, 101, 245, 0.5), 0 0 19px rgba(24, 101, 245, 0.5), 0 0 29px rgba(24, 101, 245, 0.5); 
+                    box-shadow: 0 0 15px rgba(99, 153, 253, 0.5), 0 0 24px rgba(24, 101, 245, 0.5), 0 0 32px rgba(24, 101, 245, 0.5); 
+                    scale: 1.1;
                 }
                 
                 img{
@@ -104,11 +105,12 @@
                 margin: auto;
                 display: flex;
                 justify-content: center;
-                align-items: center;  // Centra la imagen dentro del contenedor circular
-
-                &:hover {
-                    background: radial-gradient(circle, rgba(20, 20, 20, 0) 55%, rgb(41, 128, 185) 70%, rgba(8, 90, 184, 0.8) 90%);
-                    box-shadow: 0 0 15px rgba(24, 101, 245, 0.5), 0 0 19px rgba(24, 101, 245, 0.5), 0 0 29px rgba(24, 101, 245, 0.5);
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
+                &:hover{
+                    box-shadow: 0 0 15px rgba(99, 153, 253, 0.5), 0 0 24px rgba(24, 101, 245, 0.5), 0 0 32px rgba(24, 101, 245, 0.5); 
+                    scale: 1.1;
                 }
 
                 img {
@@ -134,13 +136,13 @@
     
     .tec-division{
         flex-direction: column;
-
+        width: 95%;
         .principal{
 
             ul{
                 gap: 80px;
-                margin-top: 50px;
-                margin-bottom: 50px;
+                margin-top: 90px;
+                margin-bottom: 70px;
 
                 li{
                     width: 100px; 
@@ -178,7 +180,8 @@
     
             ul {
                 gap: 0px;
-                margin-bottom: 14px;
+                margin-top: 90px;
+                margin-bottom: 50px;
 
     
                     li {
