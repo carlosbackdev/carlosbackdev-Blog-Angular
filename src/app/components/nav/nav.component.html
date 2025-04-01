@@ -10,12 +10,10 @@
             @if (navItems && navItems.length >0) {
                 <ul [ngClass]="{ 'menu-open': menuOpen }">
                     @for (nav of navItems; track $index) {
-                        <a href="#{{nav.path}}">
                             <li [ngClass]="{'active-item': nav.active}" class="{{nav.path}}" (click)="selectedItem(nav)">
                                 <i class="{{nav.icon}}"></i>
-                                {{nav.name}}
-                            </li>
-                        </a>  
+                                <a href="#{{nav.path}}">{{nav.name}}</a> 
+                            </li> 
                     }
 
                 </ul>

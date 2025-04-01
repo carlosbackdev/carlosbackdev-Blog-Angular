@@ -16,31 +16,31 @@ export class NavComponent {
   navItems: NavItemConfig[] = [{
     name: 'INICIO',
     path: 'inicio',
-    icon:'bi bi-film',
+    icon:'bi bi-windows',
     active: true
   },
   {
     name: 'TECNOLOGIAS',
     path: 'tecnology',
-    icon:'bi bi-bar-chart-fill',
+    icon:'bi bi-code-square',
     active: false
   },
   {
     name: 'PROYECTOS',
     path: 'projects',
-    icon:'bi bi-bookmark-plus-fill',
+    icon:'bi bi-boxes',
     active: false
   },
   {
     name: 'CONÓCEME', 
     path: 'info', 
-    icon: 'bi bi-person-fill',
+    icon: 'bi bi-file-person-fill',
     active: false,
   },
   {
     name: 'CONTACTO',
     path: 'social',
-    icon:'bi bi-send-fill',
+    icon:'bi bi-chat-right-heart-fill',
     active: false
   },]
 

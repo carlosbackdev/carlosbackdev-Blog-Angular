@@ -45,6 +45,8 @@
         align-items: center;
         a{
             all: unset;
+            width: 100%;
+            height: 100%;
         }
         
         li{
@@ -61,18 +63,21 @@
                 color: theme.$yellow;
 
                 i{
-                    color: theme.$yellow; 
+                    color: theme.$yellow;
                 }
             }
             i{
             color: theme.$white;
             font-size: 1.15rem;
+            transition: all 0.3s ease-in-out;
+            padding-top: 3px;
+            font-size: 14px;
             }
         }
         .active-item{
             color: theme.$yellow;
             i{
-                color: theme.$app-primary;
+                color: theme.$yellow;
             }
 
         }
@@ -317,6 +322,9 @@ li.discover {
                 &:hover {
                     background-color: theme.$app-primary;
                     color: white;
+                }
+                i{
+                    margin-right: 6px;
                 }
             }
         }
