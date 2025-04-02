@@ -130,10 +130,9 @@
       padding: 6px 12px;
       font-weight: bold;
       cursor: pointer;
-
-      &:hover {
-        transform: rotate(90deg);
-      }
+      top: 100px;
+      z-index: 100;
+      left: 75%;
     }
   }
   
@@ -151,8 +150,13 @@
   
   // Responsividad
   @media (max-width: 768px) {
+    
     .modal-project {
-
+      .close {
+        font-size: 20px;
+        top: 80px;
+        left: 20px;
+      }
         
       .modal-container {
         width: 90%;
@@ -194,21 +198,6 @@
           }
         }
         
-        .close {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          background: none;
-          border: none;
-          font-size: 24px;
-          color: #fff;
-          cursor: pointer;
-          transition: transform 0.3s ease;
-    
-          &:hover {
-            transform: rotate(90deg);
-          }
-        }
       }
     }
   }
