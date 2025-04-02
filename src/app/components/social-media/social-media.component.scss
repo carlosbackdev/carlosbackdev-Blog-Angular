@@ -114,15 +114,15 @@
         font-size: 35px;
     }
     .contacto-email {
-        gap: 20px;
+        gap: 18px;
     
         .email {
             width: fit-content;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
     
             p {
-                font-size: 15px;
+                font-size: 14.5px;
             }
         }
     
@@ -136,13 +136,14 @@
     }
     
     .square {
-        width: 86px;
-        height: 86px;
+        width: 73px;
+        height: 73px;
         border-radius: 10px;
         background: radial-gradient(circle, rgba(20, 20, 20, 0) -75%, rgb(41, 128, 185) 40%, rgba(8, 90, 184, 0.8) 85%);
         box-shadow: 0 0 8px rgba(24, 101, 245, 0.5);
         cursor: pointer;
         transition: all 0.15s ease-in-out;
+        margin: auto;
     
         &:hover {
             scale: 1.1;
