@@ -16,7 +16,7 @@ export class ProjectsComponent {
   showProjectModal: boolean = false;
   selectedProject: ProjectConfig | null = null;
   clickCount: number = 0; // Contador de clics
-  maxClicks: number=2; 
+  maxClicks: number=4; 
   isAtStart: boolean = true;
   isAtEnd: boolean = false;
   @ViewChild('projectList', { static: false }) projectList!: ElementRef;

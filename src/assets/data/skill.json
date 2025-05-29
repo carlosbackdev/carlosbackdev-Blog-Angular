@@ -14,6 +14,7 @@
     "otras":[
     { "name": "JavaScript", "image": "/assets/images/logo/javascript.png", "title": "MySql" },
     { "name": "IA Integration", "image": "/assets/images/logo/ia.webp", "title": "IA Integration" },
+    { "name": "Android Studio", "image": "/assets/images/logo/android.png", "title": "Android Studio" },
     { "name": "Html", "image": "/assets/images/logo/html.png", "title": "Html" },
     { "name": "Css", "image": "/assets/images/logo/css.png", "title": "css" }
   ],

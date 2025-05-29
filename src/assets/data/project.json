@@ -1,4 +1,42 @@
 [
+  {
+    "title": "PowerRoutine App",
+    "video":"https://player.vimeo.com/video/1088705172?badge=0&autopause=0&player_id=0&app_id=58479",
+    "images": [
+      {
+        "image": "assets/images/project/powerroutine.png"
+      },
+      {
+        "image": "assets/images/project/powerroutine.png"
+      }
+    ],
+    "repository": "https://github.com/carlosbackdev/PowerRoutine-App",
+    "link": "https://github.com/carlosbackdev/PowerRoutine-App",
+    "descripcion": "PowerRoutine es una aplicación Android desarrollada en Java que te ayuda a crear, personalizar y hacer seguimiento de tus rutinas de entrenamiento de forma inteligente y adaptada a tu perfil.",
+    "explication": "#### 🚀 ¿Para qué sirve PowerRoutine?\nPowerRoutine está diseñada para personas que desean mejorar su entrenamiento con rutinas personalizadas y seguimiento de progreso. Permite:\n- Registrar tus preferencias y características personales (objetivo, nivel, días disponibles, etc.).\n- Recibir recomendaciones automáticas de rutinas de entrenamiento adaptadas a tu perfil.\n- Seleccionar las rutinas que más te gusten, y después elegir los ejercicios que vas a realizar en cada una.\n- Consultar los detalles de cada ejercicio: series, repeticiones, descanso, material, técnica, músculo implicado, etc.\n- Marcar ejercicios y rutinas como completadas y hacer seguimiento semanal de tu avance.\n- Modificar tus preferencias y rutinas cuando quieras.\nTodo el flujo está enfocado en la personalización y el seguimiento estructurado del progreso.\n---\n#### 🏗️ Arquitectura de la Aplicación\n##### Android App (Java + MVVM)\n- **Lenguaje principal**: Java (todas las Activities y lógica central están en Java).\n- **Patrón MVVM**: Separación clara entre Model (datos y lógica), View (interfaces), y ViewModel (gestión de estados y lógica de presentación).\n###### Componentes principales:\n- **UserPreferences**: Gestiona las preferencias del usuario (nivel, objetivo, días, etc.) y calcula repeticiones, descansos, etc.\n- **Activities principales**:\n  - `PerfilActivity`: Edición de perfil y preferencias.\n  - `RutineSelecetedActivity` y `EjercicesSelectedActivity`: Selección de rutinas y ejercicios.\n  - `EjerciceDetailsActivity`: Consulta y registro de detalles de cada ejercicio.\n  - `CalendarActivity`: Seguimiento semanal de rutinas completadas.\n- **Persistencia y sincronización**: Conexión al backend mediante Retrofit y comunicación con una API RESTful.\n- **Temas y personalización**: Opciones claro/oscuro mediante preferencias y componentes reutilizables.\n---\n##### Flujo típico de usuario\n1. **Registro de preferencias**: El usuario define objetivo, nivel, días de entrenamiento, etc.\n2. **Selección de rutinas**: La app recomienda rutinas y el usuario escoge cuáles seguir.\n3. **Elección de ejercicios**: Dentro de cada rutina, el usuario selecciona los ejercicios disponibles y los guarda.\n4. **Seguimiento**: Al realizar los ejercicios, puede marcar series/repeticiones y completar rutinas.\n5. **Visualización de progreso**: `Calendar` y perfil muestran rutinas completadas y detalles de avance.\n---\n##### 🛠️ Backend: Spring Boot + PostgreSQL\n- **API RESTful**: Desarrollada con Spring Boot, arquitectura en capas (Controlador, Servicio, Repositorio, DTOs).\n- **Base de datos relacional**: PostgreSQL almacena usuarios, rutinas, ejercicios, músculos, objetivos, niveles y registros de progreso.\n##### Personalización avanzada:\n- Las rutinas se generan según los parámetros del usuario.\n- Cambios en nivel u objetivo modifican automáticamente series, repeticiones y ejercicios sugeridos.\n- Algoritmo para evitar rutinas incompatibles muscularmente en el mismo periodo.\n- **Sin registro obligatorio**: Puedes explorar rutinas sin necesidad de crear cuenta.\n---\n##### Ejemplo de flujo backend\n1. **Android (Cliente)**\n   ⬇️\n2. **Controlador REST (Spring Boot)**\n   ⬇️\n3. **Servicio (Java)**\n   ⬇️\n4. **Repositorio (JPA/Hibernate)**\n   ⬇️\n5. **Base de datos (PostgreSQL)**\n   ⬆️\n6. **DTOs y JSON para Android**\n---\n##### 📊 Características Técnicas\n- **Lenguaje**: Java (Android, Spring Boot)\n- **Arquitectura**: MVVM (frontend), Clean/Layered (backend)\n- **Persistencia**: PostgreSQL\n- **Comunicación**: Retrofit para llamadas HTTP\n- **Gestión de estado**: Preferencias de usuario, seguimiento de rutinas completadas, cambio de tema, etc.\n- **UI**: Activities y componentes reutilizables (Views, Navigators, etc.)\n---\n##### ✨ ¿Por qué usar PowerRoutine?\n- **Personalización total**: No hay dos usuarios iguales, y tus rutinas tampoco lo serán.\n- **Seguimiento fácil**: Marca tus avances y consulta tu progreso semanal.\n- **Escalable y mantenible**: Arquitectura profesional tanto en app como backend, pensado para crecer.\n- **Experiencia de usuario**: Interfaz intuitiva, cambios de tema y navegación fluida.\n- **Open Source**: Inspírate o contribuye en el desarrollo.",
+    "id":4,
+    "tecnology": [
+      {
+        "name": "Java",
+        "image":"/assets/images/logo/java.png"
+      },
+      {
+        "name": "MySQL",
+        "image":"/assets/images/logo/mysql.png"
+      },
+      {
+        "name": "Android Studio",
+        "image":"/assets/images/logo/android.png"
+      },
+      {
+        "name": "Spring Boot",
+        "image":"/assets/images/logo/spring.png"
+      },{
+        "name": "IA Integration",
+        "image":"/assets/images/logo/ia.webp"
+      }
+    ]
+  },
     {
       "title": "MovieSearch Aplicación Web",
       "video":"https://player.vimeo.com/video/1065072327?badge=0&autopause=0&player_id=0&app_id=58479",
@@ -34,6 +72,36 @@
         },{
           "name": "IA Integration",
           "image":"/assets/images/logo/ia.webp"
+        }
+      ]
+    },
+    {
+      "title": "ChatSocket Chat Client y Server",
+      "video":"/assets/images/project/chatsocket.webp",
+      "images": [
+        {
+          "image": "/assets/images/project/chatsocket.webp"
+        },
+        {
+          "image": "/assets/images/project/socketjava.png"
+        }
+      ],
+      "repository": "https://github.com/carlosbackdev/ChatSockets",
+      "link": "https://github.com/carlosbackdev/ChatSockets",
+      "explication": "#### 💬 ChatSockets 🔗\n\n #ChatSockets es una aplicación de chat cliente-servidor basada en Java que utiliza sockets, multi-threading y el patrón Observer para comunicación en tiempo real. Creada por **carlosbackdev**.\n---\n##### 📚 Fundamentos Teóricos\n1. **Arquitectura Cliente/Servidor** 🖥️↔️🖥️\n   - **Servidor**: Proporciona servicios, siempre escuchando solicitudes de los clientes.\n   - **Cliente**: Se conecta al servidor, envía/recibe mensajes.\n   - ➡️ Múltiples clientes pueden conectarse simultáneamente al servidor, que gestiona la comunicación y los recursos.\n2. **Comunicación por Sockets y Patrón Observer en Java** 🧩📡\n   - **Sockets**: Permiten comunicación directa entre aplicaciones en una red.\n   - **Patrón Observer**: Usado con `MensajeListener` y `MensajesEscucha` para desacoplar eventos de red de la lógica de la interfaz gráfica y actualizar automáticamente la UI al recibir mensajes.\n3. **Multi-threading para Comunicación en Tiempo Real** 🧵⚡\n   - El servidor crea un hilo dedicado por cliente para comunicación asíncrona.\n   - Los clientes escuchan mensajes del servidor en un hilo separado, manteniendo la UI responsiva.\n---\n##### 🚀 Características\n- 🤖 Interfaz gráfica intuitiva con JavaFX para cliente y servidor.\n- 🔁 Soporte para múltiples clientes simultáneos.\n- 📢 Mensajes de difusión del servidor a todos los clientes.\n- 📡 Comunicación en tiempo real y actualizaciones de conexión.\n- 📝 Registro en consola de eventos clave.\n- 💾 JAR ejecutable para despliegue multiplataforma.\n- 🧼 Código modular, limpio y escalable.\n---\n##### 🛠️ Tecnologías Usadas\n- ✅ **Java 17**\n- 🎨 **JavaFX 17**\n- ⚙️ **Maven**\n- 🌐 **TCP Sockets**\n- 🧠 **Threads & ExecutorService**\n- 📶 **Patrón Observer**\n- 📄 **FXML**\n---\n##### 🌐 Consejos de Red\n- Configura la VM de Linux en modo puente o NAT con reenvío de puertos.\n- Haz ping a la IP de Linux desde Windows para confirmar conectividad.\n- Usa la IP de Linux (por ejemplo, `10.0.3.32`) y el puerto configurado al iniciar el cliente.\n- Lanza múltiples instancias de cliente para probar el chat grupal.",
+      "id":5,
+      "tecnology": [
+        {
+          "name": "Java",
+          "image":"/assets/images/logo/java.png"
+        },
+        {
+          "name": "Windows Server",
+          "image":"/assets/images/logo/windows.webp"
+        },
+        {
+          "name": "Linux",
+          "image":"/assets/images/logo/ubuntu.webp"
         }
       ]
     },{

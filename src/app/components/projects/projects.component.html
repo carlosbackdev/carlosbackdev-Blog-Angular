@@ -6,10 +6,10 @@
         <ul #projectList>
         @for (project of projectConfig; track $index) {
             <li>
-                @if(project.id == 1){
+                @if(project.id == 4){
                     <div class="new">Nuevo</div>
                 }
-                @if(project.id != 1){
+                @if(project.id != 4){
                     <div style="opacity: 0;" class="new">nuevo</div>
                 }
                 <div class="boton" (click)="openProjectModal(project)">

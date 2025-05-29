@@ -1,4 +1,8 @@
-[
+[    {
+      "url": "https://player.vimeo.com/video/1088705172?badge=0&autopause=0&player_id=0&app_id=58479",
+      "name": "Aplicación Android seguimiento de rutinas de gimnasio.",
+      "description": "Descripción del segundo video."
+    },
     {
       "url": "https://player.vimeo.com/video/1065072327?badge=0&autopause=0&player_id=0&app_id=58479",
       "name": "Aplicación Web Angular y Api springboot con IA integrada.",
@@ -6,7 +10,7 @@
     },
     {
       "url": "https://player.vimeo.com/video/1065067394?badge=0&autopause=0&player_id=0&app_id=58479",
-      "name": "Aplicación de escritorio y Web CRM para gestión Pymes.",
+      "name": "Aplicación de escritorio y Web ERP para gestión Pymes.",
       "description": "Descripción del segundo video."
     }
   ]
