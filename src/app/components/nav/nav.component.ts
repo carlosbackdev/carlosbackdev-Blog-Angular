@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NavComponent {
   menuOpen: boolean = false;
+  // Eliminado soporte de tema y búsqueda
   navItems: NavItemConfig[] = [{
     name: 'INICIO',
     path: 'inicio',
@@ -32,6 +33,12 @@ export class NavComponent {
     active: false
   },
   {
+    name: 'EXPERIENCIA',
+    path: 'experience',
+    icon: 'bi bi-briefcase-fill',
+    active: false
+  },
+  {
     name: 'CONÓCEME', 
     path: 'info', 
     icon: 'bi bi-file-person-fill',
@@ -45,6 +52,15 @@ export class NavComponent {
   },]
 
   constructor(private router: Router){}
+  ngOnInit(){
+    window.addEventListener('sectionChange', (e: any) => {
+      const id = e.detail;
+      // id 'inicio' en layout corresponde a path 'inicio'
+      if(id){
+        this.setActiveNavItem(id);
+      }
+    });
+  }
   selectedItem(nav: NavItemConfig){
     this.navItems.forEach((item: NavItemConfig) => {
       item.active = nav.name === item.name;
@@ -76,5 +92,6 @@ export class NavComponent {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
     }
+    // openSearch eliminado
 
 }

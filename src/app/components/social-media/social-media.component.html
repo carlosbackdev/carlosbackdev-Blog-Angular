@@ -1,26 +1,43 @@
-<section>
-    <div class="titulo-container">
-        <h3>CONTACTO</h3>
+<section class="contact-wrapper fade-in-section">
+  <div class="header-block">
+    <h3 class="title">Contacto</h3>
+    <p class="subtitle">¿Listo para colaborar? Hablemos 👋</p>
+  </div>
+
+  <div class="contact-card" aria-labelledby="email-heading">
+    <div class="email-block">
+      <div class="icon-mail" aria-hidden="true">
+        <img src="assets/images/social/gmail.webp" alt="" loading="lazy"/>
+      </div>
+      <div class="email-info">
+        <h4 id="email-heading" class="visually-hidden">Correo electrónico</h4>
+  <p class="address">carlosbackdev&#64;gmail.com</p>
+        <p class="hint">Haz clic para copiar</p>
+      </div>
+      <button type="button" class="copy-btn" (click)="copiarEmail()" aria-label="Copiar correo electrónico" [disabled]="copying">
+        @if(!copying && !copyStatus){<span class="btn-label">Copiar</span>}
+        @if(copying){<span class="btn-label">Copiando…</span>}
+        @if(copyStatus){<span class="btn-label success">{{copyStatus}}</span>}
+      </button>
     </div>
-    <div class="contacto-email">
-        <div class="email">
-          <p class="p-sobremi">carlosbackdev&#64;gmail.com</p>
+  </div>
+
+  <div class="social-grid" aria-label="Redes sociales">
+    @for(item of social; track $index){
+      <a class="social-item" href="{{item.link}}" target="_blank" rel="nofollow noopener"
+         [attr.aria-label]="'Abrir '+ item.title" title="Ir a {{item.title}}">
+        <div class="logo-wrap">
+          <img src="{{item.logo}}" alt="{{item.title}}" loading="lazy"
+               [class.scale-up]="item.title === 'Linkedin' || item.title === 'GitHub' || item.title==='ElecIdea'">
         </div>
-        <div class="copiarmail" (click)="copiarEmail()">
-          <img style="width: 100%; scale: 1.2;" src="assets/images/social/gmail.webp" alt="Copiar" title="Copiar">
-        </div>
-      </div>
-      <div class="social-container">
-      @for(item of social; track $index){
-        <div class="square">
-            <a href="{{item.link}}" target="_blank" rel="nofollow" title="ir a ver {{item.title}}">
-                @if(item.title == 'Linkedin' || item.title == 'GitHub' || item.title=='ElecIdea'){
-                    <img src="{{item.logo}}" alt="logo de {{item.title}}" title="logo de {{item.title}}" style="scale: 1.2;">
-                }@else{
-                    <img src="{{item.logo}}" alt="logo de {{item.title}}" title="logo de {{item.title}}">
-                }
-            </a>
-        </div>
-      }
-      </div>
+        <span class="sr-label">{{item.title}}</span>
+      </a>
+    }
+  </div>
+
+  <div class="extra-cta">
+    <p>También puedes encontrarme en esas plataformas o enviarme un mensaje directo.</p>
+  </div>
+
+  <div class="visually-hidden" aria-live="polite">{{copyStatus}}</div>
 </section>

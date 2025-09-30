@@ -3,12 +3,14 @@
     { "name": "Java", "image": "/assets/images/logo/java.png", "title": "Java"},
     { "name": "Spring Boot", "image": "/assets/images/logo/spring.png", "title": "Spring boot" },
     { "name": "Angular", "image": "/assets/images/logo/angular.png", "title": "Angular" },
+    { "name": "Apache Flink", "image": "/assets/images/logo/flink.png", "title": "Apache Flink" },
     { "name": "TypeScript", "image": "/assets/images/logo/typescript.png", "title": "typescript" }
   ],
   "bases":[
     { "name": "MySql", "image": "/assets/images/logo/mysql.png", "title": "MySql" },
     { "name": "Pl/Sql", "image": "/assets/images/logo/plsql.png", "title": "Pl/Sql" },
     { "name": "MongoDB", "image": "/assets/images/logo/mongo.png", "title": "MongoDB" },
+    { "name": "Kafka", "image": "/assets/images/logo/kafka.png", "title": "Kafka" },
     { "name": "FireBase", "image": "/assets/images/logo/fire.png", "title": "FireBase" }
   ],
     "otras":[
@@ -21,6 +23,7 @@
   "sistemas":[
   { "name": "Ubuntu", "image": "/assets/images/logo/ubuntu.webp", "title": "Ubuntu" },
   { "name": "Windows Server", "image": "/assets/images/logo/windows.webp", "title": "Windows Server" },
+  { "name": "Docker", "image": "/assets/images/logo/docker.svg", "title": "Docker" },
   { "name": "Cisco", "image": "/assets/images/logo/cisco.png", "title": "Cisco" }
 ]
   

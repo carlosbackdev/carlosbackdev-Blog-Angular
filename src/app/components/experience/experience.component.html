@@ -1,0 +1,44 @@
+<section id="experience" class="experience-container" *ngIf="!loading && !error" itemscope itemtype="https://schema.org/ItemList">
+  <div class="titulo-container">
+    <h3 itemprop="name">EXPERIENCIA</h3>
+  </div>
+  <ul class="timeline">
+    <li *ngFor="let item of experience; index as i" class="timeline-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <meta itemprop="position" [attr.content]="i+1" />
+      <div class="marker"></div>
+      <article class="card" [class.recent]="i === 0" itemscope itemtype="https://schema.org/EmployeeRole">
+        <header>
+          <div class="logo">
+            <img itemprop="image" [src]="item.logo" [alt]="'Logo ' + item.company" loading="lazy" />
+          </div>
+          <div class="meta">
+            <h4><span itemprop="roleName">{{ item.role }}</span> <span style="padding-left: 0.5rem; font-style: italic;" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">{{ item.company }}</span></span></h4>
+            <p class="periodo"><time itemprop="startDate" [attr.datetime]="item.start">{{ item.start | date:'MMM y':'es' }}</time> - <time itemprop="endDate" [attr.datetime]="item.end==='actualidad' ? '' : item.end">{{ item.end | titlecase }}</time></p>
+            <p class="mode">{{ item.mode }} · {{ item.location }}</p>
+          </div>
+        </header>
+        <p class="summary" itemprop="description">{{ item.summary }}</p>
+        <div class="responsabilidades">
+          <h5>Responsabilidades</h5>
+          <ul>
+            <li *ngFor="let r of item.responsibilities" itemprop="responsibilities">{{ r }}</li>
+          </ul>
+        </div>
+        <div class="tech-stack">
+          <h5>Stack</h5>
+          <div class="logos">
+            <img *ngFor="let t of item.technologies" [src]="t.image" [alt]="t.name" [title]="t.name" loading="lazy" itemprop="skills" />
+          </div>
+        </div>
+        <div class="skills" *ngIf="item.skills?.length">
+          <h5>Skills</h5>
+          <ul>
+            <li *ngFor="let s of item.skills" itemprop="skills">{{ s }}</li>
+          </ul>
+        </div>
+      </article>
+    </li>
+  </ul>
+</section>
+<div class="loading" *ngIf="loading">Cargando experiencia...</div>
+<div class="error" *ngIf="error">{{ error }}</div>

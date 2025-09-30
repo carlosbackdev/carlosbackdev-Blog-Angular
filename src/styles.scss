@@ -1,13 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 html{
-    margin: 0px;
-    padding: 0px;
-    scrollbar-width: thin; 
-    scrollbar-color: #555 #2c2c2c; 
+  margin: 0px;
+  padding: 0px;
+  scrollbar-width: thin; 
+  scrollbar-color: #555 #2c2c2c; 
+  scroll-behavior: smooth;
 }
 body{
     background: linear-gradient(to right, rgb(0, 0, 0), rgb(3, 18, 29), rgb(0, 0, 0));
     
+}
+/* Utilidades de animación */
+.fade-in-section { opacity: 0; transform: translateY(18px); transition: opacity .9s ease, transform .9s ease; }
+.fade-in-section.visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce){
+  html { scroll-behavior: auto; }
+  .fade-in-section { transition:none; transform:none !important; opacity:1 !important; }
 }
 ::-webkit-scrollbar {
     width: 12px; 
@@ -27,3 +36,17 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #777; 
   }
+
+/* Utilidad accesible para contenido solo visible a lectores de pantalla */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}

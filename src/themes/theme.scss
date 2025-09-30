@@ -13,3 +13,58 @@ $blue-text:rgb(35, 149, 255);
 $shadow: 0px 0px 10px rgb(0 154 255), 0px 0px 23px rgb(0 152 255 / 84%);
 $linear-gradiante:linear-gradient(0deg, rgba(6, 16, 26, 0.4) 0%, rgba(2, 16, 29, 0.6) 100%);
 $linear-gradiante2:linear-gradient(0deg, rgba(9, 24, 39, 0.5) 0%, rgba(5, 26, 46, 0.7) 100%);
+
+// 2025 Enhancement: CSS custom properties bridge for runtime theming
+:root {
+	--color-primary: #35a6ff;
+	--color-primary-accent: #00c8ff;
+	--color-bg: #020b14;
+	--color-bg-alt: #061624;
+	--color-surface: #0b2335;
+	--color-text: #e4f3ff;
+	--color-text-dim: #9cc7e6;
+	--color-border: rgba(75,170,255,0.2);
+	--radius-sm: 6px;
+	--radius-md: 12px;
+	--radius-lg: 18px;
+	--transition-base: .35s cubic-bezier(.4,.14,.3,1);
+	--shadow-focus: 0 0 0 3px rgba(53,166,255,.35);
+	--gradient-accent: linear-gradient(120deg,#0b2d44,#103d5d,#0b2d44);
+	--font-code: 'Fira Code', monospace;
+	--font-head: 'Bungee Inline', sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-bg: #f5fbff;
+		--color-bg-alt: #e8f4fb;
+		--color-surface: #ffffff;
+		--color-text: #062236;
+		--color-text-dim: #476377;
+		--color-border: rgba(0,102,153,0.25);
+		--gradient-accent: linear-gradient(120deg,#c9ecff,#e8f5ff,#c9ecff);
+	}
+}
+
+// Manual override (wins over media if user selecciona toggle)
+[data-theme='light'] {
+	--color-bg: #f5fbff !important;
+	--color-bg-alt: #e8f4fb !important;
+	--color-surface: #ffffff !important;
+	--color-text: #062236 !important;
+	--color-text-dim: #476377 !important;
+	--color-border: rgba(0,102,153,0.25) !important;
+	--gradient-accent: linear-gradient(120deg,#c9ecff,#e8f5ff,#c9ecff) !important;
+
+	// Ajustes específicos de componentes si se quiere aclarar backgrounds oscuros existentes
+	body { background: linear-gradient(to right,#f2f9ff,#e8f4fb,#f2f9ff) !important; }
+	.experience-container { background: radial-gradient(circle at 20% 20%,rgba(160,200,230,.35),rgba(230,244,251,.9) 70%), linear-gradient(120deg,#e8f4fb,#ffffff,#e8f4fb) !important; }
+	.card { background: rgba(255,255,255,0.78) !important; box-shadow: 0 8px 24px -10px rgba(0,40,70,.15),0 0 0 1px rgba(0,70,130,.05) !important; }
+	.card header .logo { background: linear-gradient(140deg,#f0f9ff,#dff1ff) !important; }
+	.timeline:before { background: linear-gradient(180deg,#7db9ff,#35a6ff,#7db9ff) !important; }
+}
+
+// Motion reduction fallback
+@media (prefers-reduced-motion: reduce) {
+	* { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

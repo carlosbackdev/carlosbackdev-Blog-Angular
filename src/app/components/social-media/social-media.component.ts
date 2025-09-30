@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SocialMediaComponent {
   social: socialConfig[]=[];
+  copying = false;
+  copyStatus: string | null = null;
   
   constructor(private http: HttpClient){}
   ngOnInit(){
@@ -24,11 +26,18 @@ export class SocialMediaComponent {
 
 
   copiarEmail() {
+    if(this.copying) return;
     const email = 'carlosbackdev@gmail.com';
+    this.copying = true;
+    this.copyStatus = null;
     navigator.clipboard.writeText(email).then(() => {
-      alert('Correo copiado al portapapeles.');
+      this.copyStatus = 'Copiado!';
     }).catch(err => {
       console.error('Error al copiar el correo: ', err);
+      this.copyStatus = 'Error';
+    }).finally(()=>{
+      this.copying = false;
+      setTimeout(()=>{ this.copyStatus = null; }, 3000);
     });
   }
   

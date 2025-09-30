@@ -1,5 +1,25 @@
 [
   {
+      "title": "ScanCam Visión IA & OCR",
+      "video": "https://player.vimeo.com/video/0000000000", 
+      "images": [
+        { "image": "/assets/images/project/scancam.jpg" },
+        { "image": "/assets/images/project/scancam.jpg" }
+      ],
+      "repository": "https://github.com/carlosbackdev/ScanCam", 
+      "link": "https://github.com/carlosbackdev/ScanCam",
+      "descripcion": "ScanCam es una aplicación de escaneo inteligente que combina visión por computador, OCR avanzado y procesamiento semántico para extraer, limpiar y estructurar información desde imágenes o documentos capturados por la cámara.",
+      "explication": "#### 📸 ScanCam: Escaneo Inteligente con Visión + IA + OCR\n\nScanCam convierte tu cámara en una herramienta profesional de extracción de datos. Captura facturas, tickets, documentos técnicos o textos impresos y el sistema los procesa para entregarte información estructurada lista para integrar o analizar.\n\n---\n#### 🚀 ¿Qué hace?\n- Detecta automáticamente bordes y corrige perspectiva.\n- Mejora nitidez (filtros adaptativos y binarización inteligente).\n- Aplica OCR multilenguaje (Números, Español, Inglés, etc.).\n- Limpia ruido (caracteres erróneos, símbolos no deseados).\n- Analiza semánticamente el texto (fechas, importes, entidades clave).\n- Exporta resultados en JSON estructurado o texto plano.\n\n---\n#### 🧠 Flujo de Procesamiento\n1. Captura / Importación de imagen.\n2. Preprocesado: corrección de perspectiva + filtros (desenfoque gaussiano ligero + umbral adaptativo).\n3. Detección de contornos y segmentación de regiones relevantes.\n4. OCR por bloques (layout awareness) para mejorar precisión.\n5. Post-procesado léxico y normalización (regex + heurísticas).\n6. Extracción semántica (fechas, totales, etiquetas clave).\n7. Generación de resultado estructurado.\n\n---\n#### 🔍 Ejemplo de Salida JSON\n```json\n{\n  \"factura\": {\n    \"proveedor\": \"Ejemplo S.L.\",\n    \"fecha\": \"2025-09-30\",\n    \"total\": 128.45,\n    \"moneda\": \"EUR\"\n  }\n}\n```\n\n---\n#### 🛠️ Stack Técnico\n- Visión: OpenCV / filtros morfológicos / detección de contornos.\n- OCR: Tesseract (optimización de whitelist + configuración multilenguaje).\n- Backend / API: Spring Boot para exponer procesamiento batch o por streaming.\n- Frontend / Cliente: Angular (captura, preview, recorte interactivo).\n- IA Semántica: Reglas + posible integración futura con modelos NLP ligeros.\n\n---\n#### ✨ Valor Añadido\n- Reduce tareas manuales de transcripción.\n- Mejora precisión frente a OCR directo sin preprocesamiento.\n- Extensible para dominios específicos: logística, finanzas, inventario.\n\n---\n#### 🧪 Calidad y Rendimiento\n- Caché de modelos cargados en memoria.\n- Procesamiento en lotes para múltiples páginas.\n- Normalización configurable por tipo de documento.\n\n---\n#### 🔮 Futuras Mejoras\n- Entrenamiento ligero de reconocimiento de campos específicos.\n- Firma digital/verificación de autenticidad.\n- Modo offline optimizado.\n\n---\n#### 🔗 Integración\nPuede actuar como servicio independiente (microservicio OCR) o embebido en aplicaciones empresariales. Ideal para automatizar flujos documentales.\n\n---\n#### ✅ Resultado\nUn pipeline robusto de captura → limpieza → OCR → estructuración semántica listo para integrarse en dashboards, ERPs o sistemas de análisis documental.",
+      "id": 6,
+      "tecnology": [
+        { "name": "Flink", "image": "/assets/images/logo/flink.png" },
+        { "name": "Docker", "image": "/assets/images/logo/docker.svg" },
+        { "name": "Spring Boot", "image": "/assets/images/logo/spring.png" },
+        { "name": "Kafka", "image": "/assets/images/logo/kafka.png" },
+        { "name": "Java", "image": "/assets/images/logo/java.png" }
+      ]
+    },
+  {
     "title": "PowerRoutine App",
     "video":"https://player.vimeo.com/video/1088705172?badge=0&autopause=0&player_id=0&app_id=58479",
     "images": [

@@ -1,71 +1,80 @@
-<section>
+<section id="about" class="about-section" aria-labelledby="titulo-about">
     <div class="titulo-container">
-        <h3>CONÓCEME</h3>
+        <h3 id="titulo-about">CONÓCEME</h3>
     </div>
-    <div class="contenedor">
-        <div class="tarjeta">
-            <div class="foto-container">
-                <div class="foto">
-                    <img src="/assets/images/foto.png" alt="">
-                </div>
-                <div class="exp-container">
-                    @if(experience){
-                        <div class="exp">
-                            <h4>Experiencia</h4>
-                            <div class="list" *ngFor="let job of experience">
-                                <div class="title">
-                                    {{job.title}}
-                                </div>
-                                <ul>
-                                    <li *ngFor="let funcion of job.functions">
-                                        - {{funcion}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    }
-                    @if(education){
-                        <div class="edu">
-                            <h4>Educación</h4>
-                            <div class="list" *ngFor="let edu of education">
-                                <div class="title">
-                                    {{edu.title}}
-                                </div>
-                                <ul>
-                                    <li *ngFor="let detail of edu.details">
-                                       - {{detail}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    }
-                </div>
+    <div class="about-grid">
+        <aside class="profile">
+            <figure class="avatar">
+                <img src="/assets/images/foto.png" alt="Foto de Carlos Arroyo" loading="lazy" />
+                <figcaption>Carlos Arroyo</figcaption>
+            </figure>
+            <div class="quick-meta">
+                <h4>Stack Clave</h4>
+                <ul>
+                    <li>Java / Spring Boot</li>
+                    <li>Kafka · Flink · RabbitMQ</li>
+                    <li>SQL / NoSQL</li>
+                    <li>Docker · Azure</li>
+                    <li>Angular · Android</li>
+                </ul>
             </div>
-            <div class="info-container">
-                @if(profile){
-                    <h4>{{profile.name}}</h4>
-                    <markdown class="text" [data]="profile.resume"></markdown>
-                }
+            <div class="education" *ngIf="education?.length">
+                <h4>Educación</h4>
+                <ul>
+                    <li *ngFor="let edu of education">
+                        <strong>{{ edu.title }}</strong>
+                        <ul class="inner" *ngIf="edu.details?.length">
+                            <li *ngFor="let d of edu.details">{{ d }}</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="descargas">
+        </aside>
+
+        <article class="bio" itemprop="description">
+            <h4>Hola, soy Carlos</h4>
+            <p class="lead">Desarrollador <strong>backend / full‑stack</strong> con foco en <strong>arquitecturas de datos en streaming</strong>, sistemas distribuidos y diseño de APIs escalables.</p>
+            <p>Comencé mi trayectoria como <em>electricista industrial</em> en un centro de datos, donde entendí el valor de la infraestructura física y la fiabilidad. Esa curiosidad me llevó a aprender Python y poco después a especializarme en backend y procesamiento de datos.</p>
+            <p>Hoy combino <strong>Java + Spring Boot</strong> con ecosistema de datos (<strong>Kafka, Apache Flink, RabbitMQ, SQL/NoSQL</strong>) y herramientas de despliegue (<strong>Docker, Microsoft Azure</strong>) para construir <strong>pipelines de streaming, microservicios y APIs de alto rendimiento</strong>. También he trabajado en interfaz y cliente con <strong>Angular</strong> y <strong>Android Studio</strong>, integrando visión por computador e IA en algunos proyectos.</p>
+
+            <section aria-labelledby="proyectos-destacados" class="projects-highlight">
+                <h5 id="proyectos-destacados">Proyectos destacados</h5>
+                <ul>
+                    <li><strong>Streaming en tiempo real (Gestamp):</strong> Procesamiento de señales IoT con Kafka + Flink, integración SQL Server y despliegue en Azure.</li>
+                    <li><strong>ScanCam:</strong> Escaneo en tiempo real de cámaras web para control de aforo.</li>
+                    <li><strong>MovieSearch.es:</strong> Recomendaciones con IA y respuestas &lt; 300 ms.</li>
+                    <li><strong>PowerRoutine:</strong> App de rutinas inteligentes (+1.000 combinaciones).</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="intereses" class="intereses">
+                <h5 id="intereses">Enfoque actual</h5>
+                <ul class="tags">
+                    <li>Streaming de datos</li><li>Microservicios reactivos</li><li>Arquitectura limpia</li><li>Hexagonal</li><li>CI/CD</li><li>DevOps Cloud</li>
+                </ul>
+            </section>
+
+            <p>Mi meta es evolucionar hacia un perfil de <strong>ingeniero integral</strong>, capaz de liderar ciclo completo: arquitectura backend, pipelines de datos, optimización de rendimiento y experiencia final de usuario. Disfruto compartir conocimiento y colaborar en equipos que mezclan <strong>innovación + propósito</strong>.</p>
+
+            <div class="cta-row">
+                <a class="btn-cta" href="/assets/download/Carlos_Arroyo_CV.pdf" download="Carlos_Arroyo_CV" rel="nofollow" title="Descargar CV">Descargar CV</a>
+                <a class="btn-cta" href="/assets/download/CERTIFICACIONES.pdf" download="Carlos_Arroyo_Certificaciones" rel="nofollow" title="Descargar Certificaciones">Certificaciones</a>
+                <a class="btn-cta secondary" href="#social" title="Ir a contacto">Contacto</a>
+                <a class="btn-cta ghost" href="https://github.com/carlosbackdev" target="_blank" rel="noopener" title="Ver repositorios">GitHub</a>
+                <a class="btn-cta ghost" href="https://www.linkedin.com/in/carlos-arroyo-dev/" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+            </div>
+        </article>
+
+        <aside class="experience" *ngIf="experience?.length">
+            <h4>Experiencia previa</h4>
             <ul>
-                <li>
-                    <button class="boton">
-                        <a href="/assets/download/Carlos_Arroyo_CV.pdf" download="Carlos_Arroyo_CV" title="descargar mi curriculum">Descarga CV</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="boton">
-                        <a href="/assets/download/CERTIFICACIONES.pdf" download="Carlos_Arroyo_Certificaciones" title="descargar mis Certificaciones">Descarga Certificaciones</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="boton">
-                        <a href="#social" title="ir a contacto">Contacto</a>
-                    </button>
+                <li *ngFor="let job of experience">
+                    <strong>{{ job.title }}</strong>
+                    <ul class="inner" *ngIf="job.functions?.length">
+                        <li *ngFor="let f of job.functions">{{ f }}</li>
+                    </ul>
                 </li>
             </ul>
-        </div>
+        </aside>
     </div>
 </section>

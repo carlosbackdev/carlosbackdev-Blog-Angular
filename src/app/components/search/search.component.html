@@ -1,0 +1,28 @@
+<div class="overlay" (keydown)="keyHandler($event)">
+  <div class="panel" role="dialog" aria-modal="true" aria-label="Buscador de proyectos">
+    <div class="head">
+      <input type="text" autofocus placeholder="Buscar proyectos, tecnologías..." (input)="onInput($event)" [value]="query()" />
+      <button class="close" (click)="close()" aria-label="Cerrar">×</button>
+    </div>
+    <div class="body" *ngIf="!loading(); else loadingTpl">
+      <p class="hint" *ngIf="!query()">Empieza a escribir para filtrar…</p>
+      <ul *ngIf="results().length > 0">
+        <li *ngFor="let r of results()">
+          <h6>{{ r.title }}</h6>
+          <p class="desc" *ngIf="r.descripcion">{{ r.descripcion }}</p>
+          <div class="tags" *ngIf="r.tecnology?.length">
+            <span *ngFor="let t of r.tecnology">{{ t.name }}</span>
+          </div>
+          <div class="links">
+            <a *ngIf="r.link" [href]="r.link" target="_blank" rel="noopener">Demo</a>
+            <a *ngIf="r.repository" [href]="r.repository" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </li>
+      </ul>
+      <p *ngIf="query() && results().length === 0" class="no">Sin coincidencias.</p>
+    </div>
+    <ng-template #loadingTpl>
+      <div class="loading">Cargando...</div>
+    </ng-template>
+  </div>
+</div>

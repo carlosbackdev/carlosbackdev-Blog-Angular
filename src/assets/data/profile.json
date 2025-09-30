@@ -1,20 +1,29 @@
 {
     "name":"CARLOS ARROYO",
-    "resume": "##### Mi mundo:\n\n👋 **¡Hola! Soy un joven desarrollador Backend.** Estoy continuamente desarrollando mis proyectos y llevando a la práctica todo lo aprendido. Cada vez que pongo en marcha mi incesable hambre de conocimiento, me obliga a **profundizar en todas las herramientas** que lo rodean, ¡aunque siempre hay espacio para más en esta fiesta de la tecnología! 🚀\n\nAntes de meterme en el mundo del código, estuve en el lado físico de la tecnología, donde nació la necesidad de aprender más sobre la magia detrás de cada byte. **Todo ello me impulsó a dar el salto al desarrollo.** 💻\n\n##### Mi misión: \n**Contribuir en proyectos colaborativos en entornos laborales.** Sí, aunque trabajar solo a veces suena bien, **¡quiero compañía!** 😄 Aun así, mi camino no se detendrá, y seguiré explorando el vasto universo de la tecnología. **¡Gracias por pasar y espero que podamos crear algo genial juntos!** 🫶",
-    "image":"",
+    "resume": "### Sobre mí\\n\\n👋 **Hola, soy Carlos Arroyo** — desarrollador **backend / full-stack** con foco en **procesamiento de datos en tiempo real, arquitecturas distribuidas y APIs escalables**.\\n\\n⚡ Mi trayectoria comenzó como *electricista industrial en un centro de datos*. Ese contacto directo con la infraestructura me hizo apreciar el valor del dato y la resiliencia de los sistemas. Esa curiosidad me llevó a aprender Python primero y después a especializarme en **Java + Spring Boot** y ecosistemas de streaming.\\n\\n💻 Hoy combino **Java, Spring Boot, Kafka, Apache Flink, RabbitMQ, SQL / NoSQL, Docker y Microsoft Azure** para construir **pipelines de datos**, microservicios y soluciones en tiempo real. También he trabajado el lado cliente con **Angular**, Android (Java) e integraciones puntuales de IA / visión por computador.\\n\\n### Proyectos Destacados\\n- **Streaming en tiempo real (Gestamp):** Procesamiento de señales IoT con Kafka + Flink, integración SQL Server y despliegue en Azure.\\n- **ScanCam:** Escaneo en tiempo real de cámaras para control de aforo.\\n- **MovieSearch.es:** Recomendaciones de películas con IA y respuestas < 300 ms.\\n- **PowerRoutine:** App de rutinas inteligentes con +1.000 combinaciones personalizadas.\\n\\n### Intereses Actuales\\n- Procesamiento de datos en tiempo real\\n- Microservicios reactivos\\n- Arquitectura limpia / hexagonal\\n- CI/CD y cultura DevOps en la nube\\n\\n### Objetivo\\nConvertirme en un **ingeniero integral** capaz de abarcar: arquitectura backend, diseño de pipelines, optimización de rendimiento y experiencia de usuario. Me motiva colaborar, aprender y aportar en proyectos con **impacto, innovación y propósito**.\\n\\n> *\"La evolución técnica es una consecuencia de la curiosidad sostenida\"*\\n\\n**¿Colaboramos?** 😊",
+    "image":"/assets/images/foto.png",
     "experience":[
+        {
+            "title":"Backend Developer (Streaming) en Gestamp",
+            "functions":[
+                "Procesamiento de señales IoT en tiempo real (Kafka + Flink)",
+                "Microservicios con Spring Boot (APIs y orquestación)",
+                "Integración con SQL Server y despliegues en Azure",
+                "Optimización de pipelines y monitoreo de métricas"
+            ]
+        },
         {
             "title":"Electricista industrial data center en Sazepi SL.",
             "functions":[                
-                    "Instalación de líneas eléctricas y de comunicaciones",
-                    "Mantenimiento Racks"
+                "Instalación de líneas eléctricas y de comunicaciones",
+                "Mantenimiento Racks"
             ]
         },
         {
             "title":"Técnico electricista en Alcaraz IET",
             "functions":[                
-                    "Instalación, mantenimiento eléctrico y de telecomunicaciones en oficinas",
-                    "Conexionado de Racks"                
+                "Instalación, mantenimiento eléctrico y de telecomunicaciones en oficinas",
+                "Conexionado de Racks"                
             ]
         }
     ],
