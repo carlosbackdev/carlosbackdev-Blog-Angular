@@ -89,7 +89,7 @@
       ]          
      }, 
      "Apache Flink":{ 
-      "image": "/assets/images/logo/flink.svg",
+      "image": "/assets/images/logo/flink.png",
       "resume":"Motor de procesamiento de flujos distribuido para pipelines de streaming y batch de baja latencia.",
       "projects":[ 
           { "id":"6" },
@@ -228,7 +228,7 @@
     ]          
    }
    ,"Kafka":{ 
-    "image": "/assets/images/logo/kafka.svg",
+    "image": "/assets/images/logo/kafka.png",
     "resume":"Plataforma distribuida de streaming y mensajería para ingesta y publicación de eventos a gran escala.",
     "projects":[ 
       { "id":"6" },
