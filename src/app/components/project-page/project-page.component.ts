@@ -5,11 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { ProjectConfig } from '../../interfaces/config/project.interfaces';
 import { SeoService } from '../../services/seo.service';
 import { MarkdownModule } from 'ngx-markdown';
+import { CountUpDirective } from '../../directives/count-up.directive';
 
 @Component({
   selector: 'app-project-page',
   standalone: true,
-  imports: [CommonModule, RouterModule, MarkdownModule],
+  imports: [CommonModule, RouterModule, MarkdownModule, CountUpDirective],
   templateUrl: './project-page.component.html',
   styleUrl: './project-page.component.scss'
 })

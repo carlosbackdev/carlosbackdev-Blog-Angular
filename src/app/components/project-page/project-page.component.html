@@ -50,7 +50,7 @@
       <li *ngFor="let m of project.metrics">
         <strong>{{ m.name }}</strong>
         <span *ngIf="m.current || m.target" class="vals">
-          <span *ngIf="m.current">Actual: {{ m.current }}</span>
+          <span *ngIf="m.current">Actual: <span [appCountUp]="m.current" suffix="" class="counter"></span></span>
           <span *ngIf="m.target">Objetivo: {{ m.target }}</span>
         </span>
         <em *ngIf="m.description">{{ m.description }}</em>
