@@ -1,0 +1,15 @@
+<section class="observability" aria-labelledby="obs-title">
+  <div class="titulo-container"><h3 id="obs-title">OBSERVABILIDAD</h3></div>
+  <div class="practices-grid">
+    <article class="practice" *ngFor="let p of practices; index as i" [attr.data-index]="i+1">
+      <header>
+        <h4>{{ p.area }}</h4>
+        <span class="badge" [attr.data-maturity]="p.maturity">{{ p.maturity }}</span>
+      </header>
+      <p class="desc">{{ p.description }}</p>
+      <ul class="tools">
+        <li *ngFor="let t of p.tools">{{ t }}</li>
+      </ul>
+    </article>
+  </div>
+</section>

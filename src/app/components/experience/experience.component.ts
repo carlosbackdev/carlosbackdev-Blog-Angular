@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ExperienceData, ExperienceItem } from '../../interfaces/config/experience.interfaces';
+import { validateObject } from '../../utils/validation';
 
 @Component({
   selector: 'app-experience',
@@ -20,9 +21,32 @@ export class ExperienceComponent {
   ngOnInit(): void {
     this.http.get<ExperienceData>('/assets/data/experience.json').subscribe({
       next: (data) => {
-        this.experience = data.experience;
+        if (!Array.isArray(data.experience)) {
+          console.warn('Formato experiencia no es un array');
+          this.experience = [];
+        } else {
+          // Aceptamos technologies como array de objetos sin validar su shape aquí
+          this.experience = data.experience.filter(item => {
+            const valid = validateObject(item, {
+              company: 'string',
+              role: 'string',
+              mode: 'string',
+              location: 'string',
+              start: 'string',
+              end: 'optional:string',
+              summary: 'string',
+              responsibilities: 'array:string',
+              skills: 'array:string',
+              logo: 'string',
+              impact: 'optional:string',
+              metrics: 'optional:array:string'
+            } as any);
+            if (!valid) console.warn('Item experiencia inválido omitido:', item);
+            return valid;
+          });
+        }
         this.loading = false;
-        setTimeout(()=> this.initObserver(), 0);
+        if (this.experience.length) setTimeout(()=> this.initObserver(), 0);
       },
       error: (err) => {
         console.error(err);

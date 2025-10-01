@@ -1,0 +1,19 @@
+<section class="architecture" aria-labelledby="arch-title">
+  <div class="titulo-container">
+    <h3 id="arch-title">ARQUITECTURA</h3>
+  </div>
+  <div class="decisions">
+    <article class="decision" *ngFor="let d of decisions; index as i" [attr.data-index]="i+1" appReveal [appRevealDelay]="i*140" [appRevealThreshold]="0.18">
+      <header>
+        <h4>{{ d.title }}</h4>
+        <span class="badge">#{{ i+1 }}</span>
+      </header>
+      <ul class="layers">
+        <li><strong>Problema:</strong> {{ d.problem }}</li>
+        <li><strong>Decisión:</strong> {{ d.decision }}</li>
+        <li><strong>Trade-offs:</strong> {{ d.tradeoffs }}</li>
+        <li><strong>Impacto:</strong> {{ d.impact }}</li>
+      </ul>
+    </article>
+  </div>
+</section>

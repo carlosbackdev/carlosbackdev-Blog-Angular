@@ -15,6 +15,8 @@ export interface ExperienceItem {
   technologies: ExperienceTechnology[]; // Tecnologías claves
   skills: string[];              // Lista de skills/aptitudes
   logo: string;                  // Logo empresa
+  impact?: string;               // Impacto principal (frase)
+  metrics?: string[];            // Métricas o resultados cuantitativos
 }
 
 export interface ExperienceData {

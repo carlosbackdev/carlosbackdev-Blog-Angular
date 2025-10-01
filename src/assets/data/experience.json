@@ -7,6 +7,7 @@
       "location": "Madrid, Comunidad de Madrid, España",
       "start": "2025-06",
       "end": "actualidad",
+      
       "summary": "Como Backend Developer, formo parte de un equipo centrado en el desarrollo y procesamiento de datos en tiempo real, trabajando con un stack moderno para manejar flujos de datos complejos con baja latencia.",
       "responsibilities": [
         "Diseñar y mantener servicios backend en Java",
@@ -16,6 +17,11 @@
         "Mejora continua, revisión de código y automatización de despliegues",
         "Optimización de procesamiento de datos en entornos distribuidos"
       ],
+      "impact": "Flujos de datos en construidos para la industria 4.0, mejorando la eficiencia operativa y la toma de decisiones en tiempo real.",
+      "metrics": [
+        "Desarrollo de Aplicaciones y Servicios innovadores punteros en el sector industrial",
+          "Mejora de errores intermitentes -70% mediante testing y observabilidad"
+        ],
       "technologies": [
         { "name": "Java", "image": "/assets/images/logo/java.png" },
         { "name": "Spring Boot", "image": "/assets/images/logo/spring.png" },

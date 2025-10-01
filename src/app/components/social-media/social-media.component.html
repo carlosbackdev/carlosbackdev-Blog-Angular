@@ -39,5 +39,21 @@
     <p>También puedes encontrarme en esas plataformas o enviarme un mensaje directo.</p>
   </div>
 
+  <form class="mini-contact" (submit)="enviarMensaje($event)" novalidate aria-label="Formulario de contacto rápido">
+    <div class="field">
+      <label for="mc-email">Email</label>
+      <input id="mc-email" name="email" type="email" required placeholder="tu@email" autocomplete="email" />
+    </div>
+    <div class="field">
+      <label for="mc-msg">Mensaje</label>
+      <textarea id="mc-msg" name="mensaje" rows="3" required placeholder="¿En qué te puedo ayudar?"></textarea>
+    </div>
+    <div class="actions">
+      <button type="submit" class="send-btn" [disabled]="sending">{{ sending ? 'Enviando…' : 'Enviar' }}</button>
+      <span class="status" *ngIf="sendStatus">{{ sendStatus }}</span>
+    </div>
+  </form>
+
   <div class="visually-hidden" aria-live="polite">{{copyStatus}}</div>
 </section>
+<a href="#social" class="floating-cta" aria-label="Ir a contacto y enviar mensaje">Hablemos</a>

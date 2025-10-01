@@ -1,53 +1,44 @@
-<section @iframeFadeIn id="inicio" class="inicio-container">
-    <div class="medio-container">
-        <div class="medio_fondo">
-            <img src="../../../assets/images/future.webp" alt="fondo" loading="lazy">
-            <div class="inicio-titulo">
-                    <h2><span>'HOLA </span>MUNDO'</h2><h1>CARLOS <span>ARROYO</span></h1>
+<section id="inicio" class="inicio-container" aria-labelledby="hero-title">
+    <div class="hero-wrapper">
+        <div class="hero-core">
+            <div class="hero-bg">
+                <img src="/assets/images/future.webp" alt="Fondo abstracto futurista" loading="lazy" />
             </div>
+            <header class="hero-text">
+                <h1 id="hero-title">Backend & Data <span>Streaming Engineer</span></h1>
+                <p class="hero-sub">Diseño pipelines de eventos y microservicios de baja latencia con <strong>Java + Spring Boot, Kafka, Flink</strong> y arquitecturas limpias orientadas a observabilidad.</p>
+                <ul class="value-bar" aria-label="Logros clave">
+                    <li>Microservicios escalables</li>
+                    <li>Pipelines streaming</li>
+                    <li>Observabilidad desde el diseño</li>
+                    <li>Integración Cloud</li>
+                </ul>
+                <div class="hero-ctas">
+                    <a class="cta primary" href="#projects" title="Ver proyectos destacados">Ver proyectos</a>
+                    <a class="cta" href="/assets/download/Carlos_Arroyo_CV.pdf" download="Carlos_Arroyo_CV" rel="nofollow">Descargar CV</a>
+                    <a class="cta ghost" href="#social">Contacto</a>
+                </div>
+            </header>
         </div>
-        <div class="video-container">
-            <div class="video">
-                 @if(videos.length > 0){
-                    <iframe @iframeFadeIn loading="lazy" [src]="sanitizer.bypassSecurityTrustResourceUrl(videos[currentVideoIndex].url)"
-                        frameborder="0" allow="autoplay; fullscreen" title="Video">
-                    </iframe>
-                 }
-            </div>
-            
-            <div class="botones">
-                <button title="ver el anterior video" @buttonFadeIn #prevVideoButton (click)="prevVideo()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-square" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="M10.205 12.456A.5.5 0 0 0 10.5 12V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4a.5.5 0 0 0 .537.082"/>
-                  </svg>
-                </button>
-                <button title="ver el siguiente video" @buttonFadeIn #nextVideoButton (click)="nextVideo()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-right-square" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="M5.795 12.456A.5.5 0 0 1 5.5 12V4a.5.5 0 0 1 .832-.374l4.5 4a.5.5 0 0 1 0 .748l-4.5 4a.5.5 0 0 1-.537.082"/>
-                  </svg>
-                </button>
-            </div>
-            
+        <div class="hero-media" aria-label="Demo visual">
+            @if(videos.length > 0){
+                <div class="media-frame">
+                    <iframe loading="lazy" [src]="sanitizer.bypassSecurityTrustResourceUrl(videos[currentVideoIndex].url)" allow="autoplay; fullscreen" title="Demo video"></iframe>
+                    <div class="nav-buttons">
+                        <button class="nav prev" (click)="prevVideo()" aria-label="Video anterior">‹</button>
+                        <button class="nav next" (click)="nextVideo()" aria-label="Siguiente video">›</button>
+                    </div>
+                    <p class="video-title">{{currentVideoIndex+1}}. {{videos[currentVideoIndex].name}}</p>
+                </div>
+            }
         </div>
     </div>
-    <p id="subtitulo">Proyectos</p>
-    @if(videos.length > 0){
-        <p class="titulo-video">{{currentVideoIndex+1}}. {{videos[currentVideoIndex].name}}</p>
-    }
-    <div class="container-pie">
-        <ul>
-            <li><h2>backend <span>developer</span></h2></li>
-            <li>
-                <button class="boton">
-                    <a href="/assets/download/Carlos_Arroyo_CV.pdf" download="Carlos_Arroyo_CV.pdf" title="descargar mi curriculum">Descarga CV</a>
-                </button>
-            </li>
-            <li>
-                <button class="boton">
-                    <a href="mailto:carlosbackdev@gmail.com?subject=¡Hola!%20te%20escribo%20con%20el%20asunto%20:" title="enviar correo">Email</a>
-                </button>
-            </li>
-            <li><h2><span>software</span> engineer</h2></li>
-        </ul>
-    </div> 
+    <div class="hero-footer" aria-label="Roles / Contacto rápido">
+        <div class="role">Backend <span>Developer</span></div>
+        <div class="mini-actions">
+            <a class="mini-btn" href="/assets/download/Carlos_Arroyo_CV.pdf" download title="Descargar CV">CV</a>
+            <a class="mini-btn" href="mailto:carlosbackdev@gmail.com?subject=Contacto" title="Enviar email">Email</a>
+        </div>
+        <div class="role"><span>Software</span> Engineer</div>
+    </div>
 </section>

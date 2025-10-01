@@ -1,0 +1,14 @@
+.observability { padding:4rem 1.5rem 5rem; }
+.observability .titulo-container { text-align:center; margin-bottom:2.4rem; }
+.practices-grid { display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); width:min(1300px,96%); margin:0 auto; }
+.practice { background:linear-gradient(150deg,rgba(8,26,42,.85),rgba(14,46,70,.94)); border:1px solid rgba(90,180,255,0.22); border-radius:24px; padding:1.3rem 1.4rem 1.5rem; position:relative; box-shadow:0 14px 40px -18px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.04); }
+.practice header { display:flex; justify-content:space-between; align-items:flex-start; gap:.75rem; margin-bottom:.65rem; }
+.practice h4 { margin:0; font-size:1.08rem; font-weight:600; letter-spacing:.4px; color:#e6f7ff; }
+.badge { font-size:.55rem; letter-spacing:1px; text-transform:uppercase; padding:.35rem .55rem; border-radius:8px; background:#0d2f46; border:1px solid rgba(90,180,255,0.3); color:#cfeeff; }
+.badge[data-maturity='estable'] { background:#134d33; border-color:#2fba70; color:#d6ffe9; }
+.badge[data-maturity='en progreso'] { background:#5a460f; border-color:#e4b640; color:#ffeaa9; }
+.badge[data-maturity='experimento'] { background:#3e245e; border-color:#b27cff; color:#f0dcff; }
+.desc { margin:.1rem 0 .6rem; font-size:.78rem; line-height:1.4; color:rgba(255,255,255,.9); }
+.tools { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.45rem; }
+.tools li { font-size:.62rem; letter-spacing:.5px; background:linear-gradient(120deg,#0b3c59,#134e72); padding:.45rem .6rem; border-radius:10px; border:1px solid rgba(90,180,255,0.3); color:#d4f1ff; }
+@media (max-width:620px){ .practice { padding:1.15rem 1.1rem 1.3rem; } .practice h4 { font-size:1rem; } .desc { font-size:.74rem; } }

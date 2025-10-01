@@ -1,0 +1,16 @@
+<section class="roadmap" aria-labelledby="roadmap-title">
+  <div class="roadmap-progress" aria-hidden="true"><div class="bar" id="roadmapBar"></div></div>
+  <div class="titulo-container"><h3 id="roadmap-title">ROADMAP</h3></div>
+  <ol class="roadmap-list" itemscope itemtype="https://schema.org/ItemList">
+    <li *ngFor="let r of roadmap; index as i" class="rm-item" [class.state-done]="r.status==='done'" [class.state-progress]="r.status==='in-progress'" [class.state-next]="r.status==='next'" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" appReveal [appRevealDelay]="i*110" [appRevealThreshold]="0.15">
+      <meta itemprop="position" [attr.content]="i+1" />
+      <span class="marker-decor" aria-hidden="true"></span>
+      <div class="quarter">{{ r.quarter }}</div>
+      <div class="content">
+        <h4>{{ r.focus }}</h4>
+        <p>{{ r.detail }}</p>
+        <span class="status" [attr.data-status]="r.status">{{ r.status }}</span>
+      </div>
+    </li>
+  </ol>
+</section>
