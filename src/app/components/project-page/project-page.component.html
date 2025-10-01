@@ -1,0 +1,64 @@
+<section class="project-page" *ngIf="!loading && project; else stateTpl">
+  <div class="hero">
+    <h1>{{ project.title }}</h1>
+    <p class="desc">{{ project.descripcion }}</p>
+  </div>
+  <div class="meta">
+    <div class="stack">
+      <h4>Stack</h4>
+      <ul>
+        <li *ngFor="let t of project.tecnology">{{ t.name }}</li>
+      </ul>
+    </div>
+    <div class="links">
+      <a *ngIf="project.repository" [href]="project.repository" target="_blank" rel="noopener" class="btn">Repositorio</a>
+      <a *ngIf="project.link" [href]="project.link" target="_blank" rel="noopener" class="btn alt">Demo / Site</a>
+    </div>
+  </div>
+  <div class="content">
+    <markdown [data]="project.explication"></markdown>
+  </div>
+  <div class="diferenciacion" *ngIf="project.diferenciacion?.length">
+    <h3>Diferenciación</h3>
+    <ul>
+      <li *ngFor="let diff of project.diferenciacion">{{ diff }}</li>
+    </ul>
+  </div>
+  <div class="good-bad" *ngIf="project.dos?.length || project.donts?.length">
+    <div *ngIf="project.dos?.length" class="panel">
+      <h3>DOs</h3>
+      <ul>
+        <li *ngFor="let d of project.dos">{{ d }}</li>
+      </ul>
+    </div>
+    <div *ngIf="project.donts?.length" class="panel warn">
+      <h3>DON'Ts</h3>
+      <ul>
+        <li *ngFor="let d of project.donts">{{ d }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tradeoffs" *ngIf="project.tradeoffs?.length">
+    <h3>Trade-offs Clave</h3>
+    <ul>
+      <li *ngFor="let t of project.tradeoffs">{{ t }}</li>
+    </ul>
+  </div>
+  <div class="metrics" *ngIf="project.metrics?.length">
+    <h3>Métricas Clave</h3>
+    <ul>
+      <li *ngFor="let m of project.metrics">
+        <strong>{{ m.name }}</strong>
+        <span *ngIf="m.current || m.target" class="vals">
+          <span *ngIf="m.current">Actual: {{ m.current }}</span>
+          <span *ngIf="m.target">Objetivo: {{ m.target }}</span>
+        </span>
+        <em *ngIf="m.description">{{ m.description }}</em>
+      </li>
+    </ul>
+  </div>
+</section>
+<ng-template #stateTpl>
+  <div class="state" *ngIf="loading">Cargando...</div>
+  <div class="state" *ngIf="!loading && notFound">Proyecto no encontrado.</div>
+</ng-template>
