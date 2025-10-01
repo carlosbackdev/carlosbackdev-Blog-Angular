@@ -1,25 +1,49 @@
 [
   {
-      "title": "ScanCam Visión IA & OCR",
-      "video": "https://player.vimeo.com/video/0000000000", 
-      "images": [
-        { "image": "/assets/images/project/scancam.jpg" },
-        { "image": "/assets/images/project/scancam.jpg" }
-      ],
-      "repository": "https://github.com/carlosbackdev/ScanCam", 
-      "link": "https://github.com/carlosbackdev/ScanCam",
-      "descripcion": "ScanCam es una aplicación de escaneo inteligente que combina visión por computador, OCR avanzado y procesamiento semántico para extraer, limpiar y estructurar información desde imágenes o documentos capturados por la cámara.",
-      "explication": "#### 📸 ScanCam: Escaneo Inteligente con Visión + IA + OCR\n\nScanCam convierte tu cámara en una herramienta profesional de extracción de datos. Captura facturas, tickets, documentos técnicos o textos impresos y el sistema los procesa para entregarte información estructurada lista para integrar o analizar.\n\n---\n#### 🚀 ¿Qué hace?\n- Detecta automáticamente bordes y corrige perspectiva.\n- Mejora nitidez (filtros adaptativos y binarización inteligente).\n- Aplica OCR multilenguaje (Números, Español, Inglés, etc.).\n- Limpia ruido (caracteres erróneos, símbolos no deseados).\n- Analiza semánticamente el texto (fechas, importes, entidades clave).\n- Exporta resultados en JSON estructurado o texto plano.\n\n---\n#### 🧠 Flujo de Procesamiento\n1. Captura / Importación de imagen.\n2. Preprocesado: corrección de perspectiva + filtros (desenfoque gaussiano ligero + umbral adaptativo).\n3. Detección de contornos y segmentación de regiones relevantes.\n4. OCR por bloques (layout awareness) para mejorar precisión.\n5. Post-procesado léxico y normalización (regex + heurísticas).\n6. Extracción semántica (fechas, totales, etiquetas clave).\n7. Generación de resultado estructurado.\n\n---\n#### 🔍 Ejemplo de Salida JSON\n```json\n{\n  \"factura\": {\n    \"proveedor\": \"Ejemplo S.L.\",\n    \"fecha\": \"2025-09-30\",\n    \"total\": 128.45,\n    \"moneda\": \"EUR\"\n  }\n}\n```\n\n---\n#### 🛠️ Stack Técnico\n- Visión: OpenCV / filtros morfológicos / detección de contornos.\n- OCR: Tesseract (optimización de whitelist + configuración multilenguaje).\n- Backend / API: Spring Boot para exponer procesamiento batch o por streaming.\n- Frontend / Cliente: Angular (captura, preview, recorte interactivo).\n- IA Semántica: Reglas + posible integración futura con modelos NLP ligeros.\n\n---\n#### ✨ Valor Añadido\n- Reduce tareas manuales de transcripción.\n- Mejora precisión frente a OCR directo sin preprocesamiento.\n- Extensible para dominios específicos: logística, finanzas, inventario.\n\n---\n#### 🧪 Calidad y Rendimiento\n- Caché de modelos cargados en memoria.\n- Procesamiento en lotes para múltiples páginas.\n- Normalización configurable por tipo de documento.\n\n---\n#### 🔮 Futuras Mejoras\n- Entrenamiento ligero de reconocimiento de campos específicos.\n- Firma digital/verificación de autenticidad.\n- Modo offline optimizado.\n\n---\n#### 🔗 Integración\nPuede actuar como servicio independiente (microservicio OCR) o embebido en aplicaciones empresariales. Ideal para automatizar flujos documentales.\n\n---\n#### ✅ Resultado\nUn pipeline robusto de captura → limpieza → OCR → estructuración semántica listo para integrarse en dashboards, ERPs o sistemas de análisis documental.",
-      "id": 6,
-      "tecnology": [
-        { "name": "Flink", "image": "/assets/images/logo/flink.png" },
-        { "name": "Docker", "image": "/assets/images/logo/docker.svg" },
-        { "name": "Spring Boot", "image": "/assets/images/logo/spring.png" },
-        { "name": "Kafka", "image": "/assets/images/logo/kafka.png" },
-        { "name": "Java", "image": "/assets/images/logo/java.png" }
-      ]
-    },
+    "slug": "scancam",
+    "title": "ScanCam Visión IA & OCR",
+    "video": "https://player.vimeo.com/video/0000000000",
+    "images": [ { "image": "/assets/images/project/scancam.jpg" }, { "image": "/assets/images/project/scancam.jpg" } ],
+    "repository": "https://github.com/carlosbackdev/ScanCam",
+    "link": "https://github.com/carlosbackdev/ScanCam",
+    "descripcion": "ScanCam es una aplicación de escaneo inteligente que combina visión por computador, OCR avanzado y procesamiento semántico para extraer, limpiar y estructurar información desde imágenes o documentos capturados por la cámara.",
+    "dos": ["Preprocesar imágenes (deskew, binarización) antes de OCR","Segmentar por bloques para mejorar precisión","Normalizar fechas e importes en un formato consistente","Cachear modelos OCR en caliente para reducir latencia"],
+    "donts": ["Aplicar OCR sobre imagen cruda sin limpieza","Mezclar idiomas sin whitelist configurada","Sobreescribir datos originales sin conservar copia","Ignorar métricas de precisión por tipo de documento"],
+    "tradeoffs": ["OpenCV + Tesseract vs Servicios cloud OCR: menor coste y control, pero más mantenimiento","OCR multi-paso (bloques) aumenta precisión pero incrementa latencia","Normalización heurística rápida vs Modelo NLP avanzado: velocidad frente a contextualización"],
+    "diferenciacion": ["Pipeline completo: visión → OCR → normalización semántica","Métricas y precisión desde el diseño","Trade-offs explícitos documentados","Extensible a dominios verticales"],
+  "explication": "#### 📸 ScanCam: Escaneo Inteligente con Visión + IA + OCR\n\nScanCam convierte tu cámara en una herramienta profesional de extracción de datos. Captura facturas, tickets, documentos técnicos o textos impresos y el sistema los procesa para entregarte información estructurada lista para integrar o analizar.\n\n---\n#### 🚀 ¿Qué hace?\n- Detecta automáticamente bordes y corrige perspectiva.\n- Mejora nitidez (filtros adaptativos y binarización inteligente).\n- Aplica OCR multilenguaje (Números, Español, Inglés, etc.).\n- Limpia ruido (caracteres erróneos, símbolos no deseados).\n- Analiza semánticamente el texto (fechas, importes, entidades clave).\n- Exporta resultados en JSON estructurado o texto plano.\n\n---\n#### 🧠 Flujo de Procesamiento\n1. Captura / Importación de imagen.\n2. Preprocesado: corrección de perspectiva + filtros (desenfoque gaussiano ligero + umbral adaptativo).\n3. Detección de contornos y segmentación de regiones relevantes.\n4. OCR por bloques (layout awareness) para mejorar precisión.\n5. Post-procesado léxico y normalización (regex + heurísticas).\n6. Extracción semántica (fechas, totales, etiquetas clave).\n7. Generación de resultado estructurado.\n\n---\n#### 🔍 Ejemplo de Salida JSON\n```json\n{\n  \"factura\": {\n    \"proveedor\": \"Ejemplo S.L.\",\n    \"fecha\": \"2025-09-30\",\n    \"total\": 128.45,\n    \"moneda\": \"EUR\"\n  }\n}\n```\n\n---\n#### 🛠️ Stack Técnico\n- Visión: OpenCV / filtros morfológicos / detección de contornos.\n- OCR: Tesseract (optimización de whitelist + configuración multilenguaje).\n- Backend / API: Spring Boot para exponer procesamiento batch o por streaming.\n- Frontend / Cliente: Angular (captura, preview, recorte interactivo).\n- IA Semántica: Reglas + posible integración futura con modelos NLP ligeros.\n\n---\n#### ✨ Valor Añadido\n- Reduce tareas manuales de transcripción.\n- Mejora precisión frente a OCR directo sin preprocesamiento.\n- Extensible para dominios específicos: logística, finanzas, inventario.\n\n---\n#### 🧪 Calidad y Rendimiento\n- Caché de modelos cargados en memoria.\n- Procesamiento en lotes para múltiples páginas.\n- Normalización configurable por tipo de documento.\n\n---\n#### 🔮 Futuras Mejoras\n- Entrenamiento ligero de reconocimiento de campos específicos.\n- Firma digital/verificación de autenticidad.\n- Modo offline optimizado.\n\n---\n#### 🔗 Integración\nPuede actuar como servicio independiente (microservicio OCR) o embebido en aplicaciones empresariales. Ideal para automatizar flujos documentales.\n\n---\n#### ✅ Resultado\nUn pipeline robusto de captura → limpieza → OCR → estructuración semántica listo para integrarse en dashboards, ERPs o sistemas de análisis documental.",
+    "id": 6,
+    "tecnology": [
+      { "name": "Flink", "image": "/assets/images/logo/flink.png" },
+      { "name": "Docker", "image": "/assets/images/logo/docker.svg" },
+      { "name": "Spring Boot", "image": "/assets/images/logo/spring.png" },
+      { "name": "Kafka", "image": "/assets/images/logo/kafka.png" },
+      { "name": "Java", "image": "/assets/images/logo/java.png" }
+    ]
+  },
   {
+    "slug": "streaming-gestamp",
+    "title": "Plataforma Streaming Industrial (Gestamp)",
+    "video": "",
+    "images": [ { "image": "/assets/images/project/gestamp.png" } ],
+    "repository": "#",
+    "link": "#",
+    "descripcion": "Plataforma de streaming industrial para ingesta IoT (sensores, PLCs, líneas) con orden parcial, replay, contratos versionados y observabilidad integral (lag, throughput, latencia end‑to‑end).",
+    "dos": ["Definir contratos versionados Avro/Protobuf","Monitorizar lag y throughput por tópico","Ajustar paralelismo según backpressure","Operadores de enriquecimiento reutilizables"],
+    "donts": ["Consumir sin validar esquema","Un solo consumer-group para todo","Ignorar claves de particionado semántico","Mezclar dominios en un topic"],
+    "tradeoffs": ["Kafka vs Redis Streams: persistencia y replay vs menor latencia","Flink vs Spark: true streaming vs ecosistema batch unificado","Schema Registry añade complejidad pero evita drift"],
+    "diferenciacion": ["Caso real industrial, no toy","Gobernanza de tópicos y esquemas","Observabilidad desde el inicio","Dominios y operadores desacoplados"],
+    "explication": "## Plataforma Streaming Industrial\n\n(Contenido ampliado ya descrito anteriormente)\n",
+    "id": 7,
+    "tecnology": [
+      { "name": "Kafka", "image": "/assets/images/logo/kafka.png" },
+      { "name": "Flink", "image": "/assets/images/logo/flink.png" },
+      { "name": "Spring Boot", "image": "/assets/images/logo/spring.png" },
+      { "name": "Docker", "image": "/assets/images/logo/docker.svg" }
+    ]
+  },
+  {
+    "slug": "powerroutine-app",
     "title": "PowerRoutine App",
     "video":"https://player.vimeo.com/video/1088705172?badge=0&autopause=0&player_id=0&app_id=58479",
     "images": [
@@ -58,6 +82,7 @@
     ]
   },
     {
+      "slug": "moviesearch",
       "title": "MovieSearch Aplicación Web",
       "video":"https://player.vimeo.com/video/1065072327?badge=0&autopause=0&player_id=0&app_id=58479",
       "images": [
@@ -96,6 +121,7 @@
       ]
     },
     {
+      "slug": "chatsocket",
       "title": "ChatSocket Chat Client y Server",
       "video":"/assets/images/project/chatsocket.webp",
       "images": [
@@ -111,20 +137,13 @@
       "explication": "#### 💬 ChatSockets 🔗\n\n #ChatSockets es una aplicación de chat cliente-servidor basada en Java que utiliza sockets, multi-threading y el patrón Observer para comunicación en tiempo real. Creada por **carlosbackdev**.\n---\n##### 📚 Fundamentos Teóricos\n1. **Arquitectura Cliente/Servidor** 🖥️↔️🖥️\n   - **Servidor**: Proporciona servicios, siempre escuchando solicitudes de los clientes.\n   - **Cliente**: Se conecta al servidor, envía/recibe mensajes.\n   - ➡️ Múltiples clientes pueden conectarse simultáneamente al servidor, que gestiona la comunicación y los recursos.\n2. **Comunicación por Sockets y Patrón Observer en Java** 🧩📡\n   - **Sockets**: Permiten comunicación directa entre aplicaciones en una red.\n   - **Patrón Observer**: Usado con `MensajeListener` y `MensajesEscucha` para desacoplar eventos de red de la lógica de la interfaz gráfica y actualizar automáticamente la UI al recibir mensajes.\n3. **Multi-threading para Comunicación en Tiempo Real** 🧵⚡\n   - El servidor crea un hilo dedicado por cliente para comunicación asíncrona.\n   - Los clientes escuchan mensajes del servidor en un hilo separado, manteniendo la UI responsiva.\n---\n##### 🚀 Características\n- 🤖 Interfaz gráfica intuitiva con JavaFX para cliente y servidor.\n- 🔁 Soporte para múltiples clientes simultáneos.\n- 📢 Mensajes de difusión del servidor a todos los clientes.\n- 📡 Comunicación en tiempo real y actualizaciones de conexión.\n- 📝 Registro en consola de eventos clave.\n- 💾 JAR ejecutable para despliegue multiplataforma.\n- 🧼 Código modular, limpio y escalable.\n---\n##### 🛠️ Tecnologías Usadas\n- ✅ **Java 17**\n- 🎨 **JavaFX 17**\n- ⚙️ **Maven**\n- 🌐 **TCP Sockets**\n- 🧠 **Threads & ExecutorService**\n- 📶 **Patrón Observer**\n- 📄 **FXML**\n---\n##### 🌐 Consejos de Red\n- Configura la VM de Linux en modo puente o NAT con reenvío de puertos.\n- Haz ping a la IP de Linux desde Windows para confirmar conectividad.\n- Usa la IP de Linux (por ejemplo, `10.0.3.32`) y el puerto configurado al iniciar el cliente.\n- Lanza múltiples instancias de cliente para probar el chat grupal.",
       "id":5,
       "tecnology": [
-        {
-          "name": "Java",
-          "image":"/assets/images/logo/java.png"
-        },
-        {
-          "name": "Windows Server",
-          "image":"/assets/images/logo/windows.webp"
-        },
-        {
-          "name": "Linux",
-          "image":"/assets/images/logo/ubuntu.webp"
-        }
+        { "name": "Java", "image":"/assets/images/logo/java.png" },
+        { "name": "Windows Server", "image":"/assets/images/logo/windows.webp" },
+        { "name": "Linux", "image":"/assets/images/logo/ubuntu.webp" }
       ]
-    },{
+    },
+    {
+      "slug": "elecidea-web",
       "title": "ElecIdea API  & App Web",
       "video":"https://player.vimeo.com/video/1065067394?badge=0&autopause=0&player_id=0&app_id=58479",
       "images": [
@@ -169,6 +188,7 @@
       ]
     },
     {
+      "slug": "elecidea-desktop",
       "title": "ElecIdea software ERP desktop",
       "video":"https://player.vimeo.com/video/1065067394?badge=0&autopause=0&player_id=0&app_id=58479",
       "images": [
@@ -185,11 +205,7 @@
       "explication": "##### 🌟 Características Principales:\n- 💳 **Gestión de Facturas**: Administra fácilmente las facturas de los clientes, visualiza el estado de los pagos y genera documentos de facturación.\n- 🧑‍💼 **Gestión de Clientes**: Almacena y realiza un seguimiento de la información detallada de los clientes, facilitando la administración de cada cuenta.\n- 🏗️ **Gestión de Proyectos**: Monitorea y sigue el progreso de los proyectos en curso, incluyendo los aspectos financieros y las etapas de finalización.\n- ⚙️ **Automatización de Facturas**: Exporta automáticamente las facturas en formato Excel y envíalas por correo electrónico a los clientes, optimizando el proceso de facturación.\n- 📈 **Seguimiento del Crecimiento Empresarial**: Realiza un seguimiento de la evolución de los clientes y el crecimiento del negocio, facilitando la toma de decisiones estratégicas.\n\n---\n\n##### 💻 Tecnologías Utilizadas:\n- **Java** para el desarrollo central de la aplicación.\n- **MySQL** para la gestión de la base de datos.\n- **Swing** para la interfaz gráfica de usuario (GUI).\n- **Flatlaf** para un diseño moderno de tema oscuro.\n- **Apache POI** para generar documentos en formato XLSX.\n- **JavaMail** para el envío automático de correos electrónicos.\n- **Java Ant** para la compilación y construcción de la aplicación.\n- **NetBeans** como entorno de desarrollo.\n\n---\n\n##### 🛠️ Utilidad:\nLa aplicación está diseñada para agilizar los procesos empresariales en el sector eléctrico, ofreciendo una solución integral para la facturación, gestión de clientes y seguimiento de proyectos. El sistema permite una gestión de datos fácil y una comunicación eficiente con los clientes, incluyendo el envío automático de facturas.",
       "id":3,
       "tecnology": [
-        {
-          "name": "Java",
-          "image":"/assets/images/logo/java.png"
-
-        },
+        { "name": "Java", "image":"/assets/images/logo/java.png" },
         {
           "name": "MySQL",
           "image":"/assets/images/logo/mysql.png"
