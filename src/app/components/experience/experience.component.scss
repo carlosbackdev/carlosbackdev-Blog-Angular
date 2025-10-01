@@ -40,9 +40,7 @@
 .skills ul { margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.45rem; }
 .skills li { list-style:none; font-size:.65rem; letter-spacing:.5px; background: linear-gradient(120deg,#0b2d44,#103d5d); padding:.35rem .55rem; border-radius: 8px; border:1px solid rgba(75,170,255,0.2); box-shadow: 0 0 0 1px rgba(255,255,255,.03); }
 
-.loading, .error { padding: 2rem 1rem; text-align:center; font-size: .95rem; letter-spacing:.5px; }
-.error { color: #ff6464; }
-
+/* ================= Mobile Optimizations (progressive) ================= */
 @media (max-width: 880px) {
   .timeline:before { left: 20px; }
   .timeline-item { padding-left: 60px; }
@@ -57,6 +55,43 @@
   .timeline-item { padding-left: 56px; }
   .marker { width:26px; height:26px; top:.9rem; left:5px; }
 }
+/* Compact layout below 520px: remove central line & markers shrink */
+@media (max-width: 520px) {
+  .experience-container { padding: 3.2rem .9rem 4rem; }
+  .timeline { max-width: 640px; }
+  .timeline:before { background: none; }
+  .timeline-item { padding-left: 0; margin-bottom: 2.2rem; }
+  .marker { display:none; }
+  .card { padding: 1rem .95rem 1.05rem; border-left-width: 4px; border-radius: 16px; transform:none !important; }
+  .card header { gap:.75rem; }
+  .card header .logo { flex:0 0 46px; height:46px; border-radius: 12px; }
+  .card header .logo img { max-width:30px; max-height:30px; }
+  .card header .meta h4 { font-size:1.05rem; line-height:1.25; }
+  .periodo { font-size:.7rem; letter-spacing:.4px; }
+  .mode { font-size:.68rem; }
+  .summary { font-size:.85rem; line-height:1.45; margin:.55rem 0 .85rem; }
+  .responsabilidades h5, .tech-stack h5, .skills h5 { font-size:.7rem; margin:.15rem 0 .3rem; }
+  .responsabilidades ul { gap:.3rem; padding-left: .9rem; }
+  .responsabilidades li { font-size:.72rem; line-height:1.28; }
+  .responsabilidades li:before { left:-.9rem; }
+  .tech-stack .logos { gap:.45rem; }
+  .tech-stack img { width:30px; height:30px; }
+  .skills ul { gap:.35rem; }
+  .skills li { font-size:.58rem; padding:.32rem .5rem; }
+}
+/* Ultra small devices */
+@media (max-width: 400px) {
+  .experience-container { padding: 2.8rem .75rem 3.5rem; }
+  .card { padding: .9rem .85rem .95rem; }
+  .card header .meta h4 { font-size:.98rem; }
+  .summary { font-size:.8rem; }
+  .responsabilidades li { font-size:.68rem; }
+  .skills li { font-size:.55rem; }
+}
+
+.loading, .error { padding: 2rem 1rem; text-align:center; font-size: .95rem; letter-spacing:.5px; }
+.error { color: #ff6464; }
+
 
 @media (prefers-reduced-motion: reduce) {
   .card, .marker { animation: none !important; }

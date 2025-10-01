@@ -242,9 +242,9 @@
       { "id":"6" }
     ]          
    }
-   ,"Tesseract":{ 
-    "image": "/assets/images/logo/tesseract.png",
-    "resume":"Motor OCR de código abierto para reconocimiento óptico de caracteres multilenguaje.",
+   ,"Azure":{ 
+    "image": "/assets/images/logo/azure.png",
+    "resume":"Despliegues de aplicaciones en la nube y gestión de recursos en Microsoft Azure.",
     "projects":[ 
       { "id":"6" }
     ]          

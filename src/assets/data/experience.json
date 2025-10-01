@@ -23,8 +23,8 @@
         { "name": "Apache Flink", "image": "/assets/images/logo/flink.png" },
         { "name": "RabbitMQ", "image": "/assets/images/logo/rabbitmq.svg" },
         { "name": "Docker", "image": "/assets/images/logo/docker.svg" },
-        { "name": "Microsoft Azure", "image": "/assets/images/logo/azure.svg" },
-        { "name": "Grafana", "image": "/assets/images/logo/grafana.svg" },
+        { "name": "Azure", "image": "/assets/images/logo/azure.png" },
+        { "name": "Grafana", "image": "/assets/images/logo/Grafana.png" },
         { "name": "JUnit", "image": "/assets/images/logo/junit.svg" }
       ],
       "skills": [

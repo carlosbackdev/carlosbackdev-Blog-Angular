@@ -21,8 +21,8 @@
     { "name": "Css", "image": "/assets/images/logo/css.png", "title": "css" }
   ],
   "sistemas":[
+  {"name": "Azure", "image": "/assets/images/logo/azure.png", "title": "Azure"},
   { "name": "Ubuntu", "image": "/assets/images/logo/ubuntu.webp", "title": "Ubuntu" },
-  { "name": "Windows Server", "image": "/assets/images/logo/windows.webp", "title": "Windows Server" },
   { "name": "Docker", "image": "/assets/images/logo/docker.svg", "title": "Docker" },
   { "name": "Cisco", "image": "/assets/images/logo/cisco.png", "title": "Cisco" }
 ]
