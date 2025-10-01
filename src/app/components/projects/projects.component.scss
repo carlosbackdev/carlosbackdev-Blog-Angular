@@ -58,18 +58,25 @@ ul{
     overflow-x: hidden;
     overflow-y: hidden;
 
-    li{
+    li.project-card{
         all: unset;
-        display: grid        ;
-        align-items: center;
+        cursor: pointer;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        align-items: flex-start;
         justify-content: center;
         width: 400px;
         height: auto;
         padding: 40px;
         margin-bottom: 0px;
-        .boton{
-            cursor: pointer;
-        }
+        position: relative;
+        transition: transform .35s ease, filter .35s ease;
+        outline: none;
+        &:focus-visible{ box-shadow: 0 0 0 3px rgba(0,155,255,.6); border-radius: 12px; }
+        &:hover { transform: translateY(-4px); }
+        .boton{ cursor: pointer; }
+        .badge-wrapper{ position:relative; height:34px; display:flex; justify-content:center; }
+        .hidden-badge{ visibility:hidden; pointer-events:none; }
 
         &:first-child .luz{
             left: 5px;
@@ -93,6 +100,7 @@ ul{
             height: 35px;
             margin: auto;
             background: radial-gradient(circle, rgba(224, 184, 8, 0) -100%, rgb(236, 221, 13) 15%, rgba(20, 20, 20, 0) 81%);
+            pointer-events:none;
         }
 
         .contenedor-imagen{
@@ -119,7 +127,7 @@ ul{
         .resumen{
             position: relative;
             align-items: center;
-            top: -140px;
+            top: -120px; /* ligeramente menos para no solapar zona central */
             background-color: rgb(0, 155, 255, 0.95);
             height: 80px;
             margin-left: 25px;
@@ -154,11 +162,13 @@ ul{
             position: relative;
             top: -40px;
             margin: auto;
-            z-index: 10;
+            z-index: 5; /* menor que el contenedor principal */
             gap: 40px;
             width: 100%;
             justify-content: center;
+            pointer-events: none; /* no bloquea clicks en huecos */
             .square{
+                pointer-events: auto; /* los enlaces siguen siendo clicables */
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -172,10 +182,7 @@ ul{
                     width: 90%;
                     height: auto;
                     transition: all 0.2s ease-in-out;
-
-                    &:hover{
-                        scale: 1.1;
-                    }
+                    &:hover{ scale: 1.1; }
                 }
             }
         }
@@ -197,6 +204,7 @@ ul{
         animation: latido 1s infinite;
         transform-origin: center center;
         font-size: 14px;
+    pointer-events:none;
     }
 @keyframes latido {
     0% {
@@ -226,36 +234,12 @@ ul{
     ul{
         overflow-x: auto;
         gap: 30px;
-        li{
+        li.project-card{
 
             padding: 0px;
             margin-bottom: 0px;
             scale: 0.85;
-    
-            .luz{
-            }
-    
-            .contenedor-imagen{
-               
-                img{
-
-                }
-            }
-            .resumen{
-
-                
-                h4{
-
-                }
-                .tecnologias{
-
-    
-                    .logo{
- 
-                    }
-                }
-            }
-    
+            
         }
     }
 }

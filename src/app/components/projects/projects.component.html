@@ -5,28 +5,33 @@
     @if(projectConfig.length > 0){
         <ul #projectList>
         @for (project of projectConfig; track $index) {
-            <li>
-                @if(project.id == 6){
+            <li (click)="openProjectModal(project)" class="project-card">
+                <div class="badge-wrapper">
+                  @if(project.id == 6){
                     <div class="new">Nuevo</div>
-                }
-                @if(project.id != 6){
-                    <div style="opacity: 0;" class="new">nuevo</div>
-                }
-                <div class="boton" (click)="openProjectModal(project)">
-                    <div class="luz"></div>
+                  } @else {
+                    <div class="new hidden-badge" aria-hidden="true"></div>
+                  }
+                </div>
+                <div class="boton">
+                    <div class="luz" aria-hidden="true"></div>
                     <div class="contenedor-imagen">
-                        <img loading="lazy" src={{project.images[0].image}} alt="Imagen de {{project.title}}" title="Imagen de {{project.title}}">
+                        <img loading="lazy" [src]="project.images[0].image" [alt]="'Imagen de ' + project.title" [title]="'Imagen de ' + project.title">
                     </div>
                     <div class="resumen">
                         <h4>{{ project.title }}</h4>
                         <div class="tecnologias">             
                             <img loading="lazy" *ngFor="let tech of project.tecnology" class="logo" [src]="tech.image" [alt]="tech.name" [title]="tech.name">
                         </div>
-                </div>
+                    </div>
                 </div>
                 <div class="referencias">
-                    <a class="square" href={{project.repository}} target="_blank" title="Ver repositorio"><img loading="lazy" src="/assets/images/logo/githubfolder.png" alt="Logo link github" title="Logo link github"></a>
-                    <a class="square" href={{project.link}} target="_blank" title="Ver Proyecto" ><img loading="lazy" src="/assets/images/logo/web.webp" alt="Logo link web" title="Logo link web"></a>
+                    <a class="square" [href]="project.repository" target="_blank" title="Ver repositorio" rel="noopener">
+                      <img loading="lazy" src="/assets/images/logo/githubfolder.png" alt="Logo link github" title="Logo link github">
+                    </a>
+                    <a class="square" [href]="project.link" target="_blank" title="Ver Proyecto" rel="noopener">
+                      <img loading="lazy" src="/assets/images/logo/web.webp" alt="Logo link web" title="Logo link web">
+                    </a>
                 </div>
             </li>
         }
