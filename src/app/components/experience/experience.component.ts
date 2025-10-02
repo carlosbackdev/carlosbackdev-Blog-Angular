@@ -1,59 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { ExperienceData, ExperienceItem } from '../../interfaces/config/experience.interfaces';
-import { validateObject } from '../../utils/validation';
+import { ExperienceItem } from '../../interfaces/config/experience.interfaces';
+import { ExperienceService } from '../../services/experience.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss'
+  styleUrl: './experience.component.scss',
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class ExperienceComponent {
   experience: ExperienceItem[] = [];
   loading = true;
   error: string | null = null;
+  private sub?: Subscription;
 
-  constructor(private http: HttpClient) {}
+  constructor(private expService: ExperienceService) {}
 
   ngOnInit(): void {
-    this.http.get<ExperienceData>('/assets/data/experience.json').subscribe({
-      next: (data) => {
-        if (!Array.isArray(data.experience)) {
-          console.warn('Formato experiencia no es un array');
-          this.experience = [];
-        } else {
-          // Aceptamos technologies como array de objetos sin validar su shape aquí
-          this.experience = data.experience.filter(item => {
-            const valid = validateObject(item, {
-              company: 'string',
-              role: 'string',
-              mode: 'string',
-              location: 'string',
-              start: 'string',
-              end: 'optional:string',
-              summary: 'string',
-              responsibilities: 'array:string',
-              skills: 'array:string',
-              logo: 'string',
-              impact: 'optional:string',
-              metrics: 'optional:array:string'
-            } as any);
-            if (!valid) console.warn('Item experiencia inválido omitido:', item);
-            return valid;
-          });
-        }
-        this.loading = false;
-        if (this.experience.length) setTimeout(()=> this.initObserver(), 0);
-      },
-      error: (err) => {
-        console.error(err);
-        this.error = 'No se pudo cargar la experiencia';
-        this.loading = false;
+    this.sub = this.expService.getExperience().subscribe(state => {
+      this.experience = state.items;
+      this.error = state.error;
+      this.loading = false;
+      if(!this.error && this.experience.length){
+        setTimeout(()=> this.initObserver(), 0);
       }
     });
+  }
+
+  ngOnDestroy(){
+    this.sub?.unsubscribe();
   }
 
   private initObserver(){
