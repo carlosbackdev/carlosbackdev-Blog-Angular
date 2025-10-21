@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ExperienceItem } from '../../interfaces/config/experience.interfaces';
 import { ExperienceService } from '../../services/experience.service';
 import { Subscription } from 'rxjs';
+import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RevealDirective],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExperienceComponent {
   experience: ExperienceItem[] = [];
@@ -25,9 +26,6 @@ export class ExperienceComponent {
       this.experience = state.items;
       this.error = state.error;
       this.loading = false;
-      if(!this.error && this.experience.length){
-        setTimeout(()=> this.initObserver(), 0);
-      }
     });
   }
 
@@ -35,20 +33,15 @@ export class ExperienceComponent {
     this.sub?.unsubscribe();
   }
 
-  private initObserver(){
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const items = document.querySelectorAll('.timeline-item .card');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('reveal');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .15 });
-    items.forEach((el, idx) => {
-      (el as HTMLElement).style.animationDelay = (idx * 120)+'ms';
-      obs.observe(el);
-    });
+  trackByExp(index: number, item: ExperienceItem){
+    return item.company + '|' + item.role + '|' + item.start;
+  }
+
+  trackByTech(index: number, tech: { name: string; image: string }){
+    return tech?.name ?? index;
+  }
+
+  trackByString(index: number, value: string){
+    return value ?? index;
   }
 }

@@ -4,13 +4,13 @@
   </div>
   <ng-container *ngIf="experience.length; else noExp">
   <ul class="timeline">
-    <li *ngFor="let item of experience; index as i" class="timeline-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+    <li *ngFor="let item of experience; index as i; trackBy: trackByExp" class="timeline-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <meta itemprop="position" [attr.content]="i+1" />
       <div class="marker"></div>
-      <article class="card" [class.recent]="i === 0" itemscope itemtype="https://schema.org/EmployeeRole">
+      <article class="card" [class.recent]="i === 0" itemscope itemtype="https://schema.org/EmployeeRole" appReveal [appRevealDelay]="i * 120">
         <header>
           <div class="logo">
-            <img itemprop="image" [src]="item.logo" [alt]="'Logo ' + item.company" loading="lazy" />
+            <img itemprop="image" [src]="item.logo" [alt]="'Logo ' + item.company" loading="lazy" decoding="async" />
           </div>
           <div class="meta">
             <h4><span itemprop="roleName">{{ item.role }}</span> <span style="padding-left: 0.5rem; font-style: italic;" itemprop="memberOf" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">{{ item.company }}</span></span></h4>
@@ -35,13 +35,13 @@
         <div class="tech-stack">
           <h5>Stack</h5>
           <div class="logos">
-            <img *ngFor="let t of item.technologies" [src]="t.image" [alt]="t.name" [title]="t.name" loading="lazy" itemprop="skills" />
+            <img *ngFor="let t of item.technologies; trackBy: trackByTech" [src]="t.image" [alt]="t.name" [title]="t.name" loading="lazy" decoding="async" itemprop="skills" />
           </div>
         </div>
         <div class="skills" *ngIf="item.skills?.length">
           <h5>Skills</h5>
           <ul>
-            <li *ngFor="let s of item.skills" itemprop="skills">{{ s }}</li>
+            <li *ngFor="let s of item.skills; trackBy: trackByString" itemprop="skills">{{ s }}</li>
           </ul>
         </div>
       </article>

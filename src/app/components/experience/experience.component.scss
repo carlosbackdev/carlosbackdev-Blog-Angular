@@ -102,6 +102,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .card, .marker { animation: none !important; }
+  .card { opacity: 1 !important; transform: none !important; }
 }
 
 /* === Overrides contraste experiencia === */
